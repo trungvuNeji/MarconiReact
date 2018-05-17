@@ -1,0 +1,27 @@
+/************* Fonts *****************/
+
+@import url("fonts.css");
+/************ headings ***************/
+
+@import url("headings.css");
+/************ Buttons ***************/
+
+@import url("buttons.css");
+/******** specialclasses ***********/
+
+@import url("special-classes.css");
+/************* footer *************/
+
+@import url("footer.css");
+/************ header *************/
+
+@import url("header.css");
+/************style**********/
+
+@import url("style.css");
+/************chinese**********/
+
+@import url("chinese.css");
+/********** mobile ****************/
+
+@import url("mobile.css");

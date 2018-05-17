@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Header from './Header';
+import Header from '../nav/Header';
 import Banner from './Banner';
 import Modal from './Modal';
 

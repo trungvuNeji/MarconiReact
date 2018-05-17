@@ -1,0 +1,47 @@
+.banner-heading-cn {
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.main-navigation .navbar-nav-cn>li>a,
+.banner-text-cn p span,
+.text-section-cn p span,
+.footer-nav-cn>li>a {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.blue-btn-cn a,
+.transparent-btn-cn a {
+  font-size: 18px;
+}
+
+.text-section-cn p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.banner-text-cn,
+.text-box-cn p,
+.tab-content-cn div {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-size-cn {
+  font-size: 20px;
+  line-height: 30px;
+  margin-left: 4%;
+}
+
+.bottom-text-box-cn {
+  font-size: 24px;
+}
+
+.text-section-cn h3 {
+  font-size: 28px;
+}
+
+.text-box-cn h2 {
+  font-size: 34px;
+}

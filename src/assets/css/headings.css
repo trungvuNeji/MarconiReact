@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 46px;
+}
+
+.banner-heading {
+  font-size: 44px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 26px;
+  color: #000408;
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
+
+/* @media screen and (max-width: 767px) {
+
+} */
+
+@media screen and (max-width: 600px) {
+  .banner-heading {
+    font-size: 26px;
+    line-height: 38px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
