@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import logo from "./assets/images/svg/logo.svg";
-import email from "./assets/images/svg/email-icon.svg";
+import logo from "../../assets/images/svg/logo.svg";
+import email from "../../assets/images/svg/email-icon.svg";
 
 class Footer extends Component {
   constructor(props) {

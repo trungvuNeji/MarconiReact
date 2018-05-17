@@ -1,7 +1,7 @@
 // This is where we will combine all of our components
 
 import React, { Component } from 'react';
-import './assets/css/all-stylesheets.css';
+import '../assets/css/all-stylesheets.css';
 
 import Splash from './splash/Splash';
 import CoreTech from './homepage/CoreTech';
@@ -14,13 +14,13 @@ class App extends Component {
     super(props);
   }
   
-  // <Developers />
   render() {
     return(
       <div>
         <Splash />
         <CoreTech />
         <UseCases />
+        <Developers />
         <Footer />
       </div>
     );

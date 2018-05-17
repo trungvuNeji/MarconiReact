@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import separator from "./assets/images/separator-image.png";
-import ethernetImg from "./assets/images/svg/ethernet-level.svg";
-import packetImg from "./assets/images/svg/programmable-packets.svg";
-import branchImg from "./assets/images/svg/branch-chains.svg";
+import separator from "../../assets/images/separator-image.png";
+import ethernetImg from "../../assets/images/svg/ethernet-level.svg";
+import packetImg from "../../assets/images/svg/programmable-packets.svg";
+import branchImg from "../../assets/images/svg/branch-chains.svg";
 
 class CoreTech extends Component {
   constructor(props) {

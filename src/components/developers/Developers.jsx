@@ -15,7 +15,7 @@ class Developers extends Component {
   selectTab(num) {
     this.setState({ selectedPane: num });
   }
-
+  
   render() {
     return (
       <section className="content-box" data-scroll-index="0"><a id="developers"></a>
@@ -51,6 +51,11 @@ class Developers extends Component {
                     selectedPane={this.state.selectedPane} 
                     onTabChosen={this.selectTab}>
                   </TabHeaders>
+                  <select class="mb10 form-control visible-xs" id="tab_selector">
+                    <option value="0">Network Admin</option>
+                    <option value="1">Network Creation</option>
+                    <option value="2">Anti-phishing</option>
+                  </select>
                   <TabContents
                     selectedPane={this.state.selectedPane}>
                   </TabContents>
@@ -64,3 +69,5 @@ class Developers extends Component {
     );
   }
 }
+
+export default Developers;

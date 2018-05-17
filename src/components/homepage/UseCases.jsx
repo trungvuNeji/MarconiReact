@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import separator from "./assets/images/separator-image.png";
-import adminApps from "./assets/images/svg/admin-apps.svg";
-import virtualizedBlockchain from "./assets/images/svg/virtualized-blocckchain.svg";
-import securityApps from "./assets/images/svg/security-apps.svg";
-import tokenMigration from "./assets/images/svg/token-migration.svg";
-import secureNetworks from "./assets/images/svg/secure-networks.svg";
-import iot from "./assets/images/svg/iot.svg";
+import separator from "../../assets/images/separator-image.png";
+import adminApps from "../../assets/images/svg/admin-apps.svg";
+import virtualizedBlockchain from "../../assets/images/svg/virtualized-blocckchain.svg";
+import securityApps from "../../assets/images/svg/security-apps.svg";
+import tokenMigration from "../../assets/images/svg/token-migration.svg";
+import secureNetworks from "../../assets/images/svg/secure-networks.svg";
+import iot from "../../assets/images/svg/iot.svg";
 
 class UseCases extends Component {
   constructor(props) {

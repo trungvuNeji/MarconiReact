@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import heroImage from "./assets/images/svg/heroimage.svg";
+import heroImage from "../../assets/images/svg/heroimage.svg";
 
 class Banner extends Component {
   constructor(props) {

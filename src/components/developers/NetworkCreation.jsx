@@ -7,7 +7,7 @@ class NetworkCreation extends Component {
 
   render() {
     return (
-      <div className="tab-pane" id="tab2">
+      <div id="tab2">
         Spin up a new virtualized blockchain network in just a few lines of code
         <div className="col-lg-push-2 tab_01">
 

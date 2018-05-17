@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from "./assets/images/svg/logo.svg";
+import logo from "../../assets/images/svg/logo.svg";
 
 class Header extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ class Header extends Component {
                 <span className="icon-bar"></span> 
               </button>
               <div id="lang-dropdown-mobile">
-                <button onclick="languageToggleMobile()" className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
+                <button onClick="languageToggleMobile()" className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
                 <div id="myDropdown-mobile" className="dropdown-content">
                   <a href="#">EN</a>
                   <a href="cn.html">中文</a>

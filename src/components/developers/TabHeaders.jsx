@@ -13,6 +13,8 @@ class TabHeaders extends Component {
 
   render() {
     let selected = this.props.selectedPane;
+    let num = parseInt(selected) + 1;
+    
     let headers = Panes.map((pane, index) => {
       let title = pane.title;
       let klass = '';
@@ -26,7 +28,7 @@ class TabHeaders extends Component {
           className={'tab-selector ' + klass}
           onClick={this.props.onTabChosen.bind(null, index)}
           >
-          {title}{' '}
+          <a href={"#tab" + num}>{title}{' '}</a>
         </li>
       );
     });
