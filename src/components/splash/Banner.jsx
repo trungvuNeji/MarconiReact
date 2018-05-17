@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import heroImage from "../../assets/images/svg/heroimage.svg";
 
 class Banner extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

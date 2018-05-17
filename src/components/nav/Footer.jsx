@@ -4,9 +4,6 @@ import logo from "../../assets/images/svg/logo.svg";
 import email from "../../assets/images/svg/email-icon.svg";
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return(

@@ -5,9 +5,6 @@ import Banner from './Banner';
 import Modal from './Modal';
 
 class Splash extends Component  {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

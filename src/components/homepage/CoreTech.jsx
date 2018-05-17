@@ -6,9 +6,6 @@ import packetImg from "../../assets/images/svg/programmable-packets.svg";
 import branchImg from "../../assets/images/svg/branch-chains.svg";
 
 class CoreTech extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

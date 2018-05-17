@@ -9,9 +9,6 @@ import secureNetworks from "../../assets/images/svg/secure-networks.svg";
 import iot from "../../assets/images/svg/iot.svg";
 
 class UseCases extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

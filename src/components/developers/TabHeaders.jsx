@@ -7,9 +7,6 @@ const Panes = [
 ];
 
 class TabHeaders extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     let selected = this.props.selectedPane;

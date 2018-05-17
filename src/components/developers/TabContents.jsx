@@ -26,8 +26,6 @@ class TabContents extends Component {
       content = <AntiPhishing />;
     }
 
-    console.log('selected ' + selected);
-    console.log('content ' + content);
     return (
       <div className="tab-content">
         {content}

@@ -10,9 +10,6 @@ import Developers from './developers/Developers';
 import Footer from './nav/Footer';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
     return(

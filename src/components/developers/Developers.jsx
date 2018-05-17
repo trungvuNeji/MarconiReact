@@ -51,7 +51,7 @@ class Developers extends Component {
                     selectedPane={this.state.selectedPane} 
                     onTabChosen={this.selectTab}>
                   </TabHeaders>
-                  <select class="mb10 form-control visible-xs" id="tab_selector">
+                  <select className="mb10 form-control visible-xs" id="tab_selector">
                     <option value="0">Network Admin</option>
                     <option value="1">Network Creation</option>
                     <option value="2">Anti-phishing</option>
