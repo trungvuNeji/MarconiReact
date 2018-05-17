@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Banner extends React.Component {
+import heroImage from "./assets/images/svg/heroimage.svg";
+
+class Banner extends Component {
   constructor(props) {
     super(props);
   }
@@ -26,7 +28,7 @@ class Banner extends React.Component {
           </div>
 
           <figure className="banner-image col-lg-6 col-md-5 col-sm-12 col-xs-12">
-            <img src="assets/images/svg/heroimage.svg" width="630px" height="auto" alt="" />
+            <img src={heroImage} width="630px" height="auto" alt="" />
           </figure>
         </div>
       </div>

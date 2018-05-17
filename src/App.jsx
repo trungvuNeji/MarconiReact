@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Header from './Header';
-import Banner from './Banner';
-import Modal from './Modal';
+import Splash from './Splash';
 import CoreTech from './CoreTech';
+import UseCases from './UseCases';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -13,10 +13,10 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Header />
-        <Banner />
-        <Modal />
+        <Splash />
         <CoreTech />
+        <UseCases />
+        <Footer />
       </div>
     );
   }

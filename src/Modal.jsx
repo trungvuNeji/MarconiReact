@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Modal extends React.Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
   }
@@ -17,7 +17,7 @@ class Modal extends React.Component {
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
-              novalidate>
+              noValidate>
 
               <div className="modal-header">
                 <button 
@@ -102,7 +102,7 @@ class Modal extends React.Component {
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
-              novalidate>
+              noValidate>
 
               <div className="modal-header">
                 <button 
