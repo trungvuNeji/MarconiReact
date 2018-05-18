@@ -44,10 +44,16 @@ class Header extends Component {
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleMobileNav = this.toggleMobileNav.bind(this);
+    this.toggleStickyNav = this.toggleStickyNav.bind(this);
+    // this.toggleStickyNav();
   }
 
   componentDidMount() {
     window.scrollTo(0,0);
+  }
+
+  componentWillMount() {
+    this.toggleStickyNav();
   }
 
   navigateHome() {
@@ -76,6 +82,17 @@ class Header extends Component {
   toggleMobileNav() {
     var mobileNav = document.getElementById('bs-example-navbar-collapse-1');
     mobileNav.classList.toggle("in");
+  }
+
+  toggleStickyNav() {
+    var navBar = document.querySelector('.header-box');
+    var topOffSet = window.pageYOffset;
+
+    if (topOffSet > 560) {
+      // navBar.classList.add('sticky');
+    } else {
+      // navBar.classList.remove('sticky');
+    }
   }
 
   render() {
