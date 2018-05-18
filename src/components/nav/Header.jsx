@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
 
@@ -6,29 +7,66 @@ import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 
+class DropDownModal extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    var width = window.innerWidth;
+    console.log("width: " + width);
+    console.log("props " + this.props.changeLanguage);
+    if (width <= 767) {
+      return (
+        <div id="myDropdown-mobile" className="dropdown-content show">
+          <button onClick={() => this.props.changeLanguage('en')}>EN</button>
+          <button onClick={() => this.props.changeLanguage('cn')}>中文</button>
+        </div>
+      );
+    }
+    else {
+      return (
+        <div id="myDropdown" className="dropdown-content show">
+          <button onClick={() => this.props.changeLanguage('en')}>English</button>
+          <button onClick={() => this.props.changeLanguage('cn')}>中文</button>
+        </div>
+      );
+    }
+  }
+}
+
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      check: false
+      check: false,
+      modalHidden: true
     };
-    // this.i18n = this.props.i18n;
 
     this.navigateHome = this.navigateHome.bind(this);
-    this.languageToggleMobile = this.languageToggleMobile.bind(this);
+    this.toggleHidden = this.toggleHidden.bind(this);
+    this.toggleState = this.toggleState.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
+  }
+
+  componentDidMount() {
+    window.scrollTo(0,0);
   }
 
   navigateHome() {
     this.props.history.push('/');
   }
 
-  languageToggleMobile() {
-
-  }
-
   changeLanguage(lng) {
     i18n.changeLanguage(lng);
+    this.toggleState();
+  }
+
+  toggleHidden() {
+    this.setState ({ modalHidden: !this.state.modalHidden });
+  }
+
+  toggleState() {
     this.setState({ check: !this.state.check });
   }
 
@@ -53,11 +91,8 @@ class Header extends Component {
                 <span className="icon-bar"></span> 
               </button>
               <div id="lang-dropdown-mobile">
-                <button onClick={this.languageToggleMobile} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
-                <div id="myDropdown-mobile" className="dropdown-content">
-                  <a href="#">EN</a>
-                  <a href="cn.html">中文</a>
-                </div>
+                <button onClick={this.toggleHidden} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
+                {!this.state.modalHidden && <DropDownModal changeLanguage={this.changeLanguage}/>}
               </div>
               <Link to='/' className="navbar-brand"><img src={logo} alt=""/></Link>
             </div>
@@ -70,15 +105,12 @@ class Header extends Component {
                 <li><a className="click-btn" href="#technology" data-scroll-nav="1">Core Tech</a></li>
                 <li><a href="team.html"><Trans>Team</Trans></a></li>
                 <li><a href="mailto:hello@marconi.org">Contact</a></li>
+
                 <div id="lang-dropdown">
-                  <button onClick={this.languageToggleMobile} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
-                    <button onClick={() => this.changeLanguage('en')}>English</button>
-                    <button onClick={() => this.changeLanguage('cn')}>中文</button>
-                  <div id="myDropdown" className="dropdown-content">
-                    <a href="#">English</a>
-                    <a href="cn.html">中文</a>
-                  </div>
+                  <button onClick={this.toggleHidden} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
+                  {!this.state.modalHidden && <DropDownModal changeLanguage={this.changeLanguage}/>}
                 </div>
+
               </ul>
               <a href="#" id="close" className="menuClose"></a>
             </div>

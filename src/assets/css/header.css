@@ -88,14 +88,15 @@
   #lang-dropdown {
     padding: 0 5px;
   }
-  .dropdown-content a {
+  .dropdown-content button {
     font-size: 12px;
     color: black;
-    padding: 0 10px;
-    margin: 5px 0;
+    padding: 0 6px;
+    margin: 5px auto;
   }
   .dropdown-content {
     margin-left: -8px;
+    min-width: 40px;
   }
 }
 
