@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Trans } from 'react-i18next';
+
+import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      check: false
+    };
+    // this.i18n = this.props.i18n;
 
     this.navigateHome = this.navigateHome.bind(this);
+    this.languageToggleMobile = this.languageToggleMobile.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   navigateHome() {
     this.props.history.push('/');
   }
 
+  languageToggleMobile() {
+
+  }
+
+  changeLanguage(lng) {
+    i18n.changeLanguage(lng);
+    this.setState({ check: !this.state.check });
+  }
+
   render() {
+
     return (
       <div className="header-box col-xs-12 no-padding">
         <nav className="navbar navbar-default main-navigation">
@@ -33,25 +53,27 @@ class Header extends Component {
                 <span className="icon-bar"></span> 
               </button>
               <div id="lang-dropdown-mobile">
-                <button onClick="languageToggleMobile()" className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
+                <button onClick={this.languageToggleMobile} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
                 <div id="myDropdown-mobile" className="dropdown-content">
                   <a href="#">EN</a>
                   <a href="cn.html">中文</a>
                 </div>
               </div>
-              <a className="navbar-brand" href="index.html"><img src={logo} alt=""/></a>
+              <Link to='/' className="navbar-brand"><img src={logo} alt=""/></Link>
             </div>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav pull-right regular-font ">
-                <a className="navbar-brand logo-mobile-modal" href="index.html"><img src={logo} alt=""/></a>
+                <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
                 <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
                 <li><a className="click-btn" href="#developers" data-scroll-nav="0">Developers</a></li>
                 <li><a className="click-btn" href="#technology" data-scroll-nav="1">Core Tech</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="team.html"><Trans>Team</Trans></a></li>
                 <li><a href="mailto:hello@marconi.org">Contact</a></li>
                 <div id="lang-dropdown">
-                  <button onclick="languageToggle()" className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
+                  <button onClick={this.languageToggleMobile} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
+                    <button onClick={() => this.changeLanguage('en')}>English</button>
+                    <button onClick={() => this.changeLanguage('cn')}>中文</button>
                   <div id="myDropdown" className="dropdown-content">
                     <a href="#">English</a>
                     <a href="cn.html">中文</a>
