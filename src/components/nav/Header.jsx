@@ -8,10 +8,6 @@ import i18n from '../../utils/i18n';
 import logo from "../../assets/images/svg/logo.svg";
 
 class DropDownModal extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     var width = window.innerWidth;
 
@@ -39,27 +35,20 @@ class Header extends Component {
     super(props);
     this.state = {
       check: false,
-      modalHidden: true
+      languageModal: true
     };
 
     this.navigateHome = this.navigateHome.bind(this);
-    this.toggleHidden = this.toggleHidden.bind(this);
+    this.toggleLanguageModal = this.toggleLanguageModal.bind(this);
     this.toggleState = this.toggleState.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.toggleMobileNav = this.toggleMobileNav.bind(this);
   }
 
   componentDidMount() {
     window.scrollTo(0,0);
   }
-
-  // componentWillMount() {
-  //   document.addEventListener('mousedown', this.handleClickOutside, false);
-  // }
-
-  // componentWillUnMount() {
-  //   document.removeEventListener('mousedown', this.handleClickOutside, false);
-  // }
 
   navigateHome() {
     this.props.history.push('/');
@@ -70,8 +59,8 @@ class Header extends Component {
     this.toggleState();
   }
 
-  toggleHidden() {
-    this.setState ({ modalHidden: !this.state.modalHidden });
+  toggleLanguageModal() {
+    this.setState ({ languageModal: !this.state.languageModal });
   }
 
   toggleState() {
@@ -79,9 +68,14 @@ class Header extends Component {
   }
 
   handleClickOutside() {
-    if (!this.state.modalHidden) {
-      this.toggleHidden();
+    if (!this.state.languageModal) {
+      this.toggleLanguageModal();
     }
+  }
+
+  toggleMobileNav() {
+    var mobileNav = document.getElementById('bs-example-navbar-collapse-1');
+    mobileNav.classList.toggle("in");
   }
 
   render() {
@@ -95,9 +89,10 @@ class Header extends Component {
               <button 
                 type="button" 
                 className="navbar-toggle collapsed" 
-                id="menuButton" 
-                data-toggle="collapse" 
-                data-target="#bs-example-navbar-collapse-1" 
+                id="menuButton"
+                onClick={this.toggleMobileNav} 
+                // data-toggle="collapse" 
+                // data-target="#bs-example-navbar-collapse-1" 
                 aria-expanded="false"> 
                 <span className="sr-only">close</span> 
                 <span className="icon-bar"></span> 
@@ -105,8 +100,8 @@ class Header extends Component {
                 <span className="icon-bar"></span> 
               </button>
               <div id="lang-dropdown-mobile">
-                <button onClick={this.toggleHidden} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
-                {!this.state.modalHidden && <DropDownModal changeLanguage={this.changeLanguage}/>}
+                <button onClick={this.toggleLanguageModal} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
+                {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
               </div>
               <Link to='/' className="navbar-brand"><img src={logo} alt=""/></Link>
             </div>
@@ -121,12 +116,12 @@ class Header extends Component {
                 <li><a href="mailto:hello@marconi.org">Contact</a></li>
 
                 <div id="lang-dropdown">
-                  <button onClick={this.toggleHidden} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
-                  {!this.state.modalHidden && <DropDownModal changeLanguage={this.changeLanguage}/>}
+                  <button onClick={this.toggleLanguageModal} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
+                  {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                 </div>
 
               </ul>
-              <a href="#" id="close" className="menuClose"></a>
+              <a href="#" id="close" className="menuClose"><button onClick={this.toggleMobileNav}></button></a>
             </div>
 
           </div>

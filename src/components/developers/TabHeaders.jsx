@@ -10,7 +10,7 @@ class TabHeaders extends Component {
 
   render() {
     let selected = this.props.selectedPane;
-    let num = parseInt(selected) + 1;
+    let num = parseInt(selected, 10) + 1;
     
     let headers = Panes.map((pane, index) => {
       let title = pane.title;
