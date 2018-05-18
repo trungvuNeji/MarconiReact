@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
+import onClickOutside from 'react-onclickoutside';
 
 import i18n from '../../utils/i18n';
 
@@ -14,8 +14,7 @@ class DropDownModal extends Component {
 
   render() {
     var width = window.innerWidth;
-    console.log("width: " + width);
-    console.log("props " + this.props.changeLanguage);
+
     if (width <= 767) {
       return (
         <div id="myDropdown-mobile" className="dropdown-content show">
@@ -47,11 +46,20 @@ class Header extends Component {
     this.toggleHidden = this.toggleHidden.bind(this);
     this.toggleState = this.toggleState.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount() {
     window.scrollTo(0,0);
   }
+
+  // componentWillMount() {
+  //   document.addEventListener('mousedown', this.handleClickOutside, false);
+  // }
+
+  // componentWillUnMount() {
+  //   document.removeEventListener('mousedown', this.handleClickOutside, false);
+  // }
 
   navigateHome() {
     this.props.history.push('/');
@@ -68,6 +76,12 @@ class Header extends Component {
 
   toggleState() {
     this.setState({ check: !this.state.check });
+  }
+
+  handleClickOutside() {
+    if (!this.state.modalHidden) {
+      this.toggleHidden();
+    }
   }
 
   render() {
@@ -123,4 +137,4 @@ class Header extends Component {
 
 }
 
-export default Header;
+export default onClickOutside(Header);
