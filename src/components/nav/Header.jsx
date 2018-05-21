@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Trans } from 'react-i18next';
+import { connect } from 'react-redux';
 import onClickOutside from 'react-onclickoutside';
 
-// import i18n from '../../utils/i18n';
+import { Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 
@@ -56,18 +57,16 @@ class Header extends Component {
   }
 
   changeLanguage(lng) {
-    const { i18n } = this.props;
-    console.log("props " + this.props);
     i18n.changeLanguage(lng);
     this.toggleState();
+  }
+  
+  toggleState() {
+    this.setState({ check: !this.state.check });
   }
 
   toggleLanguageModal() {
     this.setState ({ languageModal: !this.state.languageModal });
-  }
-
-  toggleState() {
-    this.setState({ check: !this.state.check });
   }
 
   // Close the modal when clicking outsite of it
@@ -113,11 +112,11 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav pull-right regular-font ">
                 <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
-                <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
-                <li><a className="click-btn" href="#developers" data-scroll-nav="0">Developers</a></li>
-                <li><a className="click-btn" href="#technology" data-scroll-nav="1">Core Tech</a></li>
+                <li><a href="https://docsend.com/view/5zragmb"><Trans>Navigation 1</Trans></a></li>
+                <li><a className="click-btn" href="#developers" data-scroll-nav="0"><Trans>Navigation 2</Trans></a></li>
+                <li><a className="click-btn" href="#technology" data-scroll-nav="1"><Trans>Navigation 3</Trans></a></li>
                 <li><Link to='/team'><Trans>Navigation 4</Trans></Link></li>
-                <li><a href="mailto:hello@marconi.org">Contact</a></li>
+                <li><a href="mailto:hello@marconi.org"><Trans>Navigation 5</Trans></a></li>
 
                 <div id="lang-dropdown">
                   <button onClick={this.toggleLanguageModal} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>

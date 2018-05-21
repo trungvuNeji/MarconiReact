@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
 
   ReactDOM.render( 
-    // <I18nextProvider i18n={i18n}>
+    <I18nextProvider i18n={i18n}>
       <Root store={store} /> 
-    // </I18nextProvider>
+    </I18nextProvider>
     , root);
   registerServiceWorker();
 });

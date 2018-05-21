@@ -29,6 +29,7 @@ class Splash extends Component  {
   }
 
   render() {
+    
     return (
       <div className="outer-box blue-bg col-xs-12 no-padding">
         <section className="container">

@@ -12,13 +12,12 @@ import TeamPage from './teampage/TeamPage';
 import HomePage from './homepage/HomePage';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  constructor(props) {
+    super(props);
+  }
   
   render() {
-    const { t, i18n } = this.props;
-    console.log("inside App: " + i18n);
+
     return(
       <div>
         <Switch>
