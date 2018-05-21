@@ -129,7 +129,7 @@ class Header extends Component {
                 <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
                 <li><a className="click-btn" href="#developers" data-scroll-nav="0">Developers</a></li>
                 <li><a className="click-btn" href="#technology" data-scroll-nav="1">Core Tech</a></li>
-                <li><a href="team.html"><Trans>Team</Trans></a></li>
+                <li><Link to='/team'><Trans>Team</Trans></Link></li>
                 <li><a href="mailto:hello@marconi.org">Contact</a></li>
 
                 <div id="lang-dropdown">

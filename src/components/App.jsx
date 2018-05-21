@@ -10,6 +10,7 @@ import CoreTech from './homepage/CoreTech';
 import UseCases from './homepage/UseCases';
 import Developers from './developers/Developers';
 import Footer from './nav/Footer';
+import Team from './teampage/Team';
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
         <UseCases />
         <Developers />
         <Footer />
+        <Route exact path='/team' component={Team} />
       </div>
     );
   }
