@@ -29,7 +29,7 @@ class CoreTeam extends Component {
               <span className="blue-text">Blockchain</span>
             </h3>
             <p>Bitcoin miner, blockchain developer & investor since 2011. Founder of HashLayer (2014-15) - one of the first multi-blockchain explorers. Led teams at Google that built networking technologies. CS from USC.</p>
-            <a href="https://www.linkedin.com/in/jonghyeopkim/" target="_blank"> <i className="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/jonghyeopkim/"> <i className="fab fa-linkedin-in"></i></a>
           </div>
           <div className="team-small-box">
             <figure>

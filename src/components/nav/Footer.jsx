@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import logo from "../../assets/images/svg/logo.svg";
 import email from "../../assets/images/svg/email-icon.svg";
@@ -6,12 +7,15 @@ import email from "../../assets/images/svg/email-icon.svg";
 class Footer extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      check: false
+    };
 
-    this.scrollTop = this.scrollTop.bind(this);
+    this.toggleState = this.toggleState.bind(this);
   }
 
-  scrollTop() {
-    window.scrollTo(0,0);
+  toggleState() {
+    this.setState({ check: !this.state.check });
   }
 
   render() {
@@ -22,18 +26,18 @@ class Footer extends Component {
 
             <div className="footer-box col-xs-12 text-center">
               <div className="footer-logo pull-left">
-                <a href="#top-page" data-scroll-nav="3">
+                <Link to="/">
                   <img src={logo} alt="" />
                   <div className="copyright">
                     © 2018 Marconi Foundation
                   </div>
-                </a>
+                </Link>
               </div>
               <ul>
                 <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
                 <li><a href="#developers" data-scroll-nav="0" className="click-btn">Developers</a></li>
                 <li><a href="#technology" data-scroll-nav="1" className="click-btn">Core Tech</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><Link to="/team">Team</Link></li>
               </ul>
               <span className="pull-right">
                 <img src={email} width="22px" height="17px" alt="" />

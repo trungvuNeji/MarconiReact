@@ -4,9 +4,14 @@ import Header from '../nav/Header';
 import CoreTeam from './CoreTeam';
 import Advisor from './Advisor';
 
-class Team extends Component {
+class TeamPage extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
-    // window.scrollTo(0,0);
+    document.title = "Marconi - Team";
+    window.scrollTo(0,0);
     var navBar = document.querySelector('.header-box');
     navBar.classList.add('sticky');
   }
@@ -34,4 +39,4 @@ class Team extends Component {
   }
 }
 
-export default Team;
+export default TeamPage;

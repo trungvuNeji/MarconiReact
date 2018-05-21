@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Trans } from 'react-i18next';
 import onClickOutside from 'react-onclickoutside';
 
-import i18n from '../../utils/i18n';
+// import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 
@@ -45,7 +45,6 @@ class Header extends Component {
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleMobileNav = this.toggleMobileNav.bind(this);
-
   }
 
   componentWillMount() {
@@ -57,6 +56,8 @@ class Header extends Component {
   }
 
   changeLanguage(lng) {
+    const { i18n } = this.props;
+    console.log("props " + this.props);
     i18n.changeLanguage(lng);
     this.toggleState();
   }
@@ -86,7 +87,7 @@ class Header extends Component {
     return (
       <div className="header-box col-xs-12 no-padding">
         <nav className="navbar navbar-default main-navigation">
-          <div className="container-fluid" id="top-page" data-scroll-index="3">
+          <div className="container-fluid" data-scroll-index="3">
 
             <div className="navbar-header">
               <button 
@@ -115,7 +116,7 @@ class Header extends Component {
                 <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
                 <li><a className="click-btn" href="#developers" data-scroll-nav="0">Developers</a></li>
                 <li><a className="click-btn" href="#technology" data-scroll-nav="1">Core Tech</a></li>
-                <li><Link to='/team'><Trans>Team</Trans></Link></li>
+                <li><Link to='/team'><Trans>Navigation 4</Trans></Link></li>
                 <li><a href="mailto:hello@marconi.org">Contact</a></li>
 
                 <div id="lang-dropdown">

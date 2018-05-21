@@ -10,17 +10,22 @@ class Splash extends Component  {
   }
 
   componentDidMount() {
-    // window.scrollTo(0,0);
-    document.addEventListener('scroll', () => {
-      var navBar = document.querySelector('.header-box');
-      const fromTop = window.scrollY;
+    document.addEventListener('scroll', this.addSticky);
+  }
 
-      if (fromTop >= 560) {
-        navBar.classList.add('sticky');
-      } else {
-        navBar.classList.remove('sticky');
-      }
-    });
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.addSticky);
+  }
+
+  addSticky() {
+    var navBar = document.querySelector('.header-box');
+    const fromTop = window.scrollY;
+
+    if (fromTop >= 560) {
+      navBar.classList.add('sticky');
+    } else {
+      navBar.classList.remove('sticky');
+    }
   }
 
   render() {

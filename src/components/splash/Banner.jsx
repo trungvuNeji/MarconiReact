@@ -6,7 +6,7 @@ class Banner extends Component {
 
   render() {
     return (
-      <div className="banner col-xs-12 no-padding">
+      <div className="banner col-xs-12 no-padding" id="top-page" >
         <div className="v-align">
           <div className="banner-text col-lg-6 col-md-7 col-sm-12 col-xs-12 no-padding">
             <h1 className="banner-heading">Smart Ethernet Protocol</h1>

@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   // For smooth scrolling
   $('.click-btn').on('click', function(event) {

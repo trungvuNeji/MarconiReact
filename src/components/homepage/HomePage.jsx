@@ -6,6 +6,11 @@ import UseCases from './UseCases';
 import Developers from '../developers/Developers';
 
 class HomePage extends Component {
+  componentDidMount() {
+    document.title = "Marconi - Smart Ethernet Protocol";
+    window.scrollTo(0,0);
+  }
+
   render() {
     return (
       <div>
