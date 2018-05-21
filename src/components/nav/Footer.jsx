@@ -35,7 +35,7 @@ class Footer extends Component {
               </div>
               <ul>
                 <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
-                <li><Link to="/developers" data-scroll-nav="0" className="click-btn">Developers</Link></li>
+                <li><a href="#developers" data-scroll-nav="0" className="click-btn">Developers</a></li>
                 <li><a href="#technology" data-scroll-nav="1" className="click-btn">Core Tech</a></li>
                 <li><Link to="/team">Team</Link></li>
               </ul>

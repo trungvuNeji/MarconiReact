@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../nav/Header';
 import CoreTeam from './CoreTeam';
 import Advisor from './Advisor';
+import Footer from '../nav/Footer';
 
 class TeamPage extends Component {
   constructor(props) {
