@@ -55,14 +55,16 @@
   color: #28c2ec;
 }
 
-.main-navigation .navbar-nav>li>a:focus,
+/* .main-navigation .navbar-nav>li>a:focus, */
+
 .main-navigation .navbar-nav>li>a:hover {
   color: #0059c2;
   background: none;
 }
 
+/* .main-navigation .navbar-nav>.active>a:focus, */
+
 .main-navigation .navbar-nav>.active>a,
-.main-navigation .navbar-nav>.active>a:focus,
 .main-navigation .navbar-nav>.active>a:hover {
   color: #0059c2;
   background: none;

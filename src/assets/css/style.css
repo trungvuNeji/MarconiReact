@@ -341,6 +341,14 @@ a:focus {
   outline: none;
 }
 
+.tab-selector a {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
 /********** TEAM PAGE ************/
 
 .team-small-box h3 {

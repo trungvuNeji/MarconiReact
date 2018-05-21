@@ -7,6 +7,7 @@ import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 
+// For the language modal
 class DropDownModal extends Component {
   render() {
     var width = window.innerWidth;
@@ -35,7 +36,7 @@ class Header extends Component {
     super(props);
     this.state = {
       check: false,
-      languageModal: true
+      languageModal: true,
     };
 
     this.navigateHome = this.navigateHome.bind(this);
@@ -44,16 +45,25 @@ class Header extends Component {
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleMobileNav = this.toggleMobileNav.bind(this);
-    this.toggleStickyNav = this.toggleStickyNav.bind(this);
-    // this.toggleStickyNav();
+
   }
 
   componentDidMount() {
-    window.scrollTo(0,0);
+    // window.scrollTo(0,0);
+    document.addEventListener('scroll', () => {
+      var navBar = document.querySelector('.header-box');
+      const fromTop = window.scrollY;
+
+      if (fromTop >= 560) {
+        navBar.classList.add('sticky');
+      } else {
+        navBar.classList.remove('sticky');
+      }
+    });
   }
 
   componentWillMount() {
-    this.toggleStickyNav();
+    // this.toggleStickyNav();
   }
 
   navigateHome() {
@@ -73,6 +83,7 @@ class Header extends Component {
     this.setState({ check: !this.state.check });
   }
 
+  // Close the modal when clicking outsite of it
   handleClickOutside() {
     if (!this.state.languageModal) {
       this.toggleLanguageModal();
@@ -84,23 +95,12 @@ class Header extends Component {
     mobileNav.classList.toggle("in");
   }
 
-  toggleStickyNav() {
-    var navBar = document.querySelector('.header-box');
-    var topOffSet = window.pageYOffset;
-
-    if (topOffSet > 560) {
-      // navBar.classList.add('sticky');
-    } else {
-      // navBar.classList.remove('sticky');
-    }
-  }
-
   render() {
 
     return (
       <div className="header-box col-xs-12 no-padding">
         <nav className="navbar navbar-default main-navigation">
-          <div className="container-fluid">
+          <div className="container-fluid" id="top-page" data-scroll-index="3">
 
             <div className="navbar-header">
               <button 

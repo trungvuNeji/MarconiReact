@@ -4,6 +4,15 @@ import logo from "../../assets/images/svg/logo.svg";
 import email from "../../assets/images/svg/email-icon.svg";
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.scrollTop = this.scrollTop.bind(this);
+  }
+
+  scrollTop() {
+    window.scrollTo(0,0);
+  }
 
   render() {
     return(
@@ -13,7 +22,7 @@ class Footer extends Component {
 
             <div className="footer-box col-xs-12 text-center">
               <div className="footer-logo pull-left">
-                <a href="index.html">
+                <a href="#top-page" data-scroll-nav="3">
                   <img src={logo} alt="" />
                   <div className="copyright">
                     © 2018 Marconi Foundation
