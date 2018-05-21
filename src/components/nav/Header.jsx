@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import onClickOutside from 'react-onclickoutside';
 
-import { Trans } from 'react-i18next';
+import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
@@ -135,4 +135,4 @@ class Header extends Component {
 
 }
 
-export default onClickOutside(Header);
+export default translate("translations")(onClickOutside(Header));

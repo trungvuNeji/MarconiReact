@@ -13,7 +13,7 @@ export const en = {
     'Hero Title':
       'Smart Ethernet Protocol',
     'Hero Description':
-      'A new blockchain protocol using programmable <br/> packets to enhance security, privacy and net <br/> neutrality',
+      'A new blockchain protocol using programmable packets to enhance security, privacy and net neutrality',
     'CTA Prompt':
       'Get early access to the SDK',
     'CTA 1':
