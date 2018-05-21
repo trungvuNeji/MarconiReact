@@ -48,20 +48,6 @@ class Header extends Component {
 
   }
 
-  componentDidMount() {
-    // window.scrollTo(0,0);
-    document.addEventListener('scroll', () => {
-      var navBar = document.querySelector('.header-box');
-      const fromTop = window.scrollY;
-
-      if (fromTop >= 560) {
-        navBar.classList.add('sticky');
-      } else {
-        navBar.classList.remove('sticky');
-      }
-    });
-  }
-
   componentWillMount() {
     // this.toggleStickyNav();
   }

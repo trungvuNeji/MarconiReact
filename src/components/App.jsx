@@ -5,12 +5,10 @@ import { Route, Link, Switch } from 'react-router-dom';
 
 import '../assets/css/all-stylesheets.css';
 
-import Splash from './splash/Splash';
-import CoreTech from './homepage/CoreTech';
-import UseCases from './homepage/UseCases';
-import Developers from './developers/Developers';
+import HomPage from './homepage/HomePage';
 import Footer from './nav/Footer';
 import Team from './teampage/Team';
+import HomePage from './homepage/HomePage';
 
 class App extends Component {
   constructor(props) {
@@ -20,12 +18,11 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Route path="/" component={Splash} />
-        <CoreTech />
-        <UseCases />
-        <Developers />
-        <Footer />
+        <Route exact path="/" component={HomePage} />
+
         <Route exact path='/team' component={Team} />
+        
+        <Footer />
       </div>
     );
   }
