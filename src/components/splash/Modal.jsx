@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 class Modal extends Component {
 
   render() {
@@ -22,7 +25,7 @@ class Modal extends Component {
                   className="close"
                   data-dismiss="modal"><i className="far fa-times-circle"></i>
                 </button>
-                <h4 className="modal-title">Get early access to the Marconi SDK and the latest product updates</h4>
+                <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
                   <img src="assets/images/separator-image.png" alt="" className="img-responsive" />
                 </div>
@@ -53,7 +56,7 @@ class Modal extends Component {
                       name="FULLNAME" 
                       className="form-control" 
                       id="mce-FULLNAME" 
-                      placeholder="Full name*"
+                      placeholder={<Trans>Join Modal Name</Trans>}
                       />
                   </div>
                   <div className="input-group">
@@ -66,7 +69,7 @@ class Modal extends Component {
                       name="ORG" 
                       className="form-control" 
                       id="mce-ORG" 
-                      placeholder="Organization"
+                      placeholder={<Trans>Join Modal Organization</Trans>}
                       />
                   </div>
                   <textarea 
@@ -75,7 +78,7 @@ class Modal extends Component {
                     form="mc-embedded-subscribe-form" 
                     name="INTEREST" 
                     id="mce-INTEREST" 
-                    placeholder="why are you interested?">
+                    placeholder={<Trans>Join Modal Description</Trans>}>
                   </textarea>
                 </div>
               </div>
@@ -83,7 +86,7 @@ class Modal extends Component {
               <div className="modal-footer">
                 <input 
                   type="submit" 
-                  value="Join Community" 
+                  value={<Trans>CTA 1</Trans>} 
                   name="subscribe" 
                   id="mc-embedded-subscribe" 
                   className="btn btn-default"
@@ -99,7 +102,7 @@ class Modal extends Component {
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
-              noValidate>
+              >
 
               <div className="modal-header">
                 <button 
@@ -107,13 +110,13 @@ class Modal extends Component {
                   className="close" 
                   data-dismiss="modal">&times;
                 </button>
-                <h2 className="modal-title">Thank You!</h2>
+                <h2 className="modal-title"><Trans>Thanks Modal title</Trans></h2>
                 <div className="separator">
                   <img src="assets/images/separator-image.png" alt="" className="img-responsive" />
                 </div>
               </div>
               <div className="modal-body">
-                <h4 className="modal-title">Welcome to the Marconi community</h4>
+                <h4 className="modal-title"><Trans>Thanks Modal welcome</Trans></h4>
               </div>
             </form>
           </div>
@@ -124,4 +127,4 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+export default translate("translations")(Modal);

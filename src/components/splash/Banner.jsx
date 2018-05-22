@@ -7,7 +7,6 @@ import heroImage from "../../assets/images/svg/heroimage.svg";
 
 class Banner extends Component {
 
-  //<Trans>Hero Description</Trans>
   render() {
     return (
       <div className="banner col-xs-12 no-padding" id="top-page" >
