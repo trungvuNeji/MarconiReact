@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 import separator from "../../assets/images/separator-image.png";
 import ethernetImg from "../../assets/images/svg/ethernet-level.svg";
 import packetImg from "../../assets/images/svg/programmable-packets.svg";
@@ -13,14 +16,12 @@ class CoreTech extends Component {
         <section className="container">
           <div className="row">
             <div className="main-box text-center technology-box  padding-top padding-botom">
-              <h1 className="black-text regular-font">Core Technology</h1>
+              <h1 className="black-text regular-font"><Trans>M1 Title</Trans></h1>
               <div className="separator">
                 <img src={separator} alt="" />
               </div>
-              <p className="text-size darkgrey-text">
-                The Marconi protocol is designed down to the ethernet level and powers a
-                <br/> decentralized networking stack that provides privacy, security, net neutrality and
-                <br/> upgradability
+              <p className="text-size darkgrey-text"><Trans>
+                M1 Description</Trans>
               </p>
 
               <div className="box-holder col-xs-12 no-padding">
@@ -28,8 +29,8 @@ class CoreTech extends Component {
                   <img src={ethernetImg} width="455px" height="248px" alt="" />
                 </div>
                 <div className="text-box col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right text-left">
-                  <h2 className="text-uppercase darkgrey-text regular-font">ethernet-level <br/> encryption</h2>
-                  <p>Secure communication pipes established at Layer 2 of the OSI model provide packet-level encryption that’s more secure than just using SSL and TLS</p>
+                  <h2 className="text-uppercase darkgrey-text regular-font"><Trans>M1 Sub1 Title</Trans></h2>
+                  <p><Trans>M1 Sub1 Description</Trans></p>
                 </div>
               </div>
 
@@ -38,8 +39,8 @@ class CoreTech extends Component {
                   <img src={packetImg} width="490px" height="100px" alt="" className="packets img-responsive" />
                 </div>
                 <div className="text-box col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-left text-left">
-                  <h2 className="text-uppercase darkgrey-text regular-font">Programmable Packets</h2>
-                  <p className="para">Decentralized apps with direct access to network packets provide network administration and security functionality without expensive custom hardware</p>
+                  <h2 className="text-uppercase darkgrey-text regular-font"><Trans>M1 Sub2 Title</Trans></h2>
+                  <p className="para"><Trans>M1 Sub2 Description</Trans></p>
                 </div>
               </div>
 
@@ -48,15 +49,15 @@ class CoreTech extends Component {
                   <img src={branchImg} width="445px" height="241px" alt="" />
                 </div>
                 <div className="text-box col-lg-6 col-md-6 col-sm-12 col-xs-12 pull-right text-left">
-                  <h2 className="text-uppercase darkgrey-text regular-font">Branch Chains</h2>
-                  <p>Branchable blockchains enable the creation of new decentralized networks without traditional infrastructure that's controlled by just a few entities in any given region</p>
+                  <h2 className="text-uppercase darkgrey-text regular-font"><Trans>M1 Sub3 Title</Trans></h2>
+                  <p><Trans>M1 Sub3 Description</Trans></p>
                 </div>
               </div>
 
               <div className="bottom-text-box col-xs-12">
-                <p>Learn more about the Marconi Platform</p>
+                <p><Trans>Learn More Prompt</Trans></p>
                 <div className="blue-btn btn1">
-                  <a href="https://docsend.com/view/5zragmb">Read White Paper</a> 
+                  <a href="https://docsend.com/view/5zragmb"><Trans>Learn More CTA</Trans></a> 
                 </div>
               </div>
 
@@ -68,4 +69,4 @@ class CoreTech extends Component {
   }
 }
 
-export default CoreTech;
+export default translate("translations")(CoreTech);
