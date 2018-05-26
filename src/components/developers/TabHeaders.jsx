@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 const Panes = [
-  { title: 'Network Admin' },
-  { title: 'Network Creation' },
-  { title: 'Anti-Phising' }
+  { title: 'M3 Tab2 Title' },
+  { title: 'M3 Tab1 Title' },
+  { title: 'M3 Tab3 Title' }
 ];
 
 class TabHeaders extends Component {
@@ -25,7 +28,7 @@ class TabHeaders extends Component {
           className={'tab-selector ' + klass}
           onClick={this.props.onTabChosen.bind(null, index)}
           >
-          <a href={"#tab" + num}>{title}{' '}</a>
+          <a href={"#tab" + num}><Trans>{title}</Trans></a>
         </li>
       );
     });
@@ -37,4 +40,4 @@ class TabHeaders extends Component {
   }
 }
 
-export default TabHeaders;
+export default translate("translations")(TabHeaders);

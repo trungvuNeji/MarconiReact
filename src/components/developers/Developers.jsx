@@ -26,28 +26,28 @@ class Developers extends Component {
           <div className="row">
             <div className="main-box text-center developers-box  padding-top padding-botom">
 
-              <h1 className="black-text regular-font">Developers</h1>
+              <h1 className="black-text regular-font"><Trans>M3 Title</Trans></h1>
 
               <div className="separator">
                 <img src="assets/images/separator-image.png" alt="" />
               </div>
 
               <div className="text-section col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
-                <h3><span className="blue-text">marconi</span> applications</h3>
-                <p>Write decentralized applications using Marconi Script, a Turing-complete language with access to network packets. </p>
-                <p>Decentralized Apps can be submitted to the global chain or branch chains for public and private networks.</p>
+                <h3><span className="blue-text">marconi</span> <Trans>M3 Header 1</Trans></h3>
+                <p><Trans>M3 Description 1</Trans></p>
+                <p><Trans>M3 Description 2</Trans></p>
               </div>
 
               <div className="text-section text-section2 col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">
-                <h3><span className="blue-text">marconi</span> library</h3>
-                <p>APIs enable traffic routing, packet analysis, pattern recognition, branch chain creation and token migration.</p>
-                <p><span className="darkgrey-text bold-font text-uppercase"> Get early access to the SDK</span></p>
+                <h3><span className="blue-text">marconi</span> <Trans>M3 Header 2</Trans></h3>
+                <p><Trans>M3 Description 3</Trans></p>
+                <p><span className="darkgrey-text bold-font text-uppercase"> <Trans>M3 CTA Prompt</Trans></span></p>
                 <div className="clearfix"></div>
-                <div className="blue-btn btn1" data-toggle="modal" data-target="#myModal"><a href="#">Join Community</a> </div>
+                <div className="blue-btn btn1" data-toggle="modal" data-target="#myModal"><a href="#"><Trans>M3 CTA 1</Trans></a> </div>
               </div>
 
               <div className="tabs-section col-xs-12 no-padding padding-top" data-scroll-index="2"><a id="samplecode"></a>
-                <h3><span className="blue-text">sample </span> code</h3>
+                <h3><span className="blue-text"><Trans>M3 Header 3-1</Trans></span> <Trans>M3 Header 3-2</Trans></h3>
                 
                 <div className="tabbable">
                   <TabHeaders 
@@ -55,9 +55,9 @@ class Developers extends Component {
                     onTabChosen={this.selectTab}>
                   </TabHeaders>
                   <select className="mb10 form-control visible-xs" id="tab_selector">
-                    <option value="0">Network Admin</option>
-                    <option value="1">Network Creation</option>
-                    <option value="2">Anti-phishing</option>
+                    <option value="0"><Trans>M3 Tab2 Title</Trans></option>
+                    <option value="1"><Trans>M3 Tab1 Title</Trans></option>
+                    <option value="2"><Trans>M3 Tab3 Title</Trans></option>
                   </select>
                   <TabContents
                     selectedPane={this.state.selectedPane}>
