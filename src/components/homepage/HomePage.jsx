@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import Splash from '../splash/Splash';
 import CoreTech from './CoreTech';

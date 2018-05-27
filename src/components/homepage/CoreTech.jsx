@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { translate, Trans } from 'react-i18next';
-import i18n from '../../utils/i18n';
+// import i18n from '../../utils/i18n';
 
 import separator from "../../assets/images/separator-image.png";
 import ethernetImg from "../../assets/images/svg/ethernet-level.svg";

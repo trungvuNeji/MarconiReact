@@ -2,19 +2,14 @@
 
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { translate, Trans } from 'react-i18next';
 
 import '../assets/css/all-stylesheets.css';
 
-import HomPage from './homepage/HomePage';
 import Footer from './nav/Footer';
 import TeamPage from './teampage/TeamPage';
 import HomePage from './homepage/HomePage';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
 

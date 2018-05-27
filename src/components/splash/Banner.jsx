@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { translate, Trans } from 'react-i18next';
-import i18n from '../../utils/i18n';
+// import i18n from '../../utils/i18n';
 
 import heroImage from "../../assets/images/svg/heroimage.svg";
 

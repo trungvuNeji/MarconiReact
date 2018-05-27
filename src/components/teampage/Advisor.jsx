@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { translate, Trans } from 'react-i18next';
-import i18n from '../../utils/i18n';
+// import i18n from '../../utils/i18n';
 
 import Separator from '../../assets/images/separator-image.png';
 import GeorgeImg from '../../assets/images/advisor-1.jpg';

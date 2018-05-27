@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { translate, Trans } from 'react-i18next';
-import i18n from '../../utils/i18n';
+// import i18n from '../../utils/i18n';
 
 import logo from "../../assets/images/svg/logo.svg";
 import email from "../../assets/images/svg/email-icon.svg";

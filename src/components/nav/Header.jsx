@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import onClickOutside from 'react-onclickoutside';
 
 import { translate, Trans } from 'react-i18next';
@@ -16,19 +16,37 @@ class DropDownModal extends Component {
     if (width <= 767) {
       return (
         <div id="myDropdown-mobile" className="dropdown-content show">
-          <button onClick={() => this.props.changeLanguage('en')}>EN</button>
-          <button onClick={() => this.props.changeLanguage('cn')}>中文</button>
+          <button className="en-btn-mobile" onClick={() => this.props.changeLanguage('en')}>EN</button>
+          <button className="cn-btn-mobile" onClick={() => this.props.changeLanguage('cn')}>中文</button>
         </div>
       );
     }
     else {
       return (
         <div id="myDropdown" className="dropdown-content show">
-          <button onClick={() => this.props.changeLanguage('en')}>English</button>
-          <button onClick={() => this.props.changeLanguage('cn')}>中文</button>
+          <button className="en-btn" onClick={() => this.props.changeLanguage('en')}>English</button>
+          <button className="cn-btn" onClick={() => this.props.changeLanguage('cn')}>中文</button>
         </div>
       );
     }
+  }
+}
+
+class Language extends Component {
+
+  render() {
+    const { lang, width } = this.props;
+
+    if (lang === 'en') {
+      if (width > 767) {
+        return ('English ');
+      } else {
+        return ('EN ');
+      }
+    } else {
+      return ('中文 ');
+    }
+
   }
 }
 
@@ -40,16 +58,13 @@ class Header extends Component {
       languageModal: true,
     };
 
+    this.width = window.innerWidth;
     this.navigateHome = this.navigateHome.bind(this);
     this.toggleLanguageModal = this.toggleLanguageModal.bind(this);
     this.toggleState = this.toggleState.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleMobileNav = this.toggleMobileNav.bind(this);
-  }
-
-  componentWillMount() {
-    // this.toggleStickyNav();
   }
 
   navigateHome() {
@@ -71,9 +86,28 @@ class Header extends Component {
 
   // Close the modal when clicking outsite of it
   handleClickOutside() {
+    // Change the default language shown after closing the language modal
+    // if (this.width > 767) {    
+    //   var dropDown = document.getElementById("myDropdown");
+    //   var defaultLanguage = document.getElementsByClassName(this.language + "-btn");
+    //   // remove that language from the list
+    //   var item = defaultLanguage[1];
+    //   item.parentNode.removeChild(item);
+    //   // prepend it back onto the list
+    //   dropDown.prepend(item);
+    // } else {
+    //   var dropDownMobile = document.getElementById("myDropdown-mobile");
+    //   var defaultLanguageMobile = document.getElementsByClassName(this.language + "-btn-mobile");
+  
+    //   defaultLanguageMobile[0].parentNode.removeChild(defaultLanguageMobile[0]);
+    //   dropDownMobile.prepend(defaultLanguageMobile[0]);
+    // }
+     
+    // Closing modal
     if (!this.state.languageModal) {
       this.toggleLanguageModal();
     }
+   
   }
 
   toggleMobileNav() {
@@ -82,7 +116,8 @@ class Header extends Component {
   }
 
   render() {
-
+    const { language } = i18n;
+    
     return (
       <div className="header-box col-xs-12 no-padding">
         <nav className="navbar navbar-default main-navigation">
@@ -103,7 +138,10 @@ class Header extends Component {
                 <span className="icon-bar"></span> 
               </button>
               <div id="lang-dropdown-mobile">
-                <button onClick={this.toggleLanguageModal} className="dropbtn">EN <i className="fa fa-caret-down dropbtn"></i></button>
+                <button onClick={this.toggleLanguageModal} className="dropbtn">
+                  <Language width={this.width} lang={language} /> 
+                  <i className="fa fa-caret-down dropbtn"></i>
+                </button>
                 {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
               </div>
               <Link to='/' className="navbar-brand"><img src={logo} alt=""/></Link>
@@ -119,7 +157,10 @@ class Header extends Component {
                 <li><a href="mailto:hello@marconi.org"><Trans>Navigation 5</Trans></a></li>
 
                 <div id="lang-dropdown">
-                  <button onClick={this.toggleLanguageModal} className="dropbtn">English <i className="fa fa-caret-down dropbtn"></i></button>
+                  <button onClick={this.toggleLanguageModal} className="dropbtn">
+                    <Language width={this.width} lang={language} /> 
+                    <i className="fa fa-caret-down dropbtn"></i>
+                  </button>
                   {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                 </div>
 
