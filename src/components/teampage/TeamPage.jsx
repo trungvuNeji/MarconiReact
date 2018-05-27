@@ -13,6 +13,7 @@ class TeamPage extends Component {
   componentDidMount() {
     document.title = "Marconi - Team";
     window.scrollTo(0,0);
+    
     var navBar = document.querySelector('.header-box');
     navBar.classList.add('sticky');
   }

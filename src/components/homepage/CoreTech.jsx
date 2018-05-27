@@ -20,8 +20,10 @@ class CoreTech extends Component {
               <div className="separator">
                 <img src={separator} alt="" />
               </div>
-              <p className="text-size darkgrey-text"><Trans>
-                M1 Description</Trans>
+              <p className="text-size darkgrey-text">
+                <Trans i18nKey="M1 Description">
+                  The Marconi Protocol is designed down to the ethernet level and powers a <br /> decentralized networking stack that enhances privacy, security, net neutrality and <br /> upgradability.
+                </Trans>
               </p>
 
               <div className="box-holder col-xs-12 no-padding">

@@ -75,7 +75,7 @@ export const cn = {
     'Joyce Title': '机器学习和物联网研究员',
     'Joyce Description': '具有开创精神的研究员，同时还编著了使用物联网进行机器学习舒适度预测。之前曾在伯克利实验室担任智能网格研究员。曾就读于滑铁卢大学工程专业，并获得了加利福尼亚大学伯克利分校博士学位。',
     'Glenn Title': '连续创业者',
-    'Glenn Description': '联合创办了 PDI（此工作室制作发行过 <em>Shrek</em> 和 <em>Madagascar</em> 等动画系列）和 VanEdge Capital。DreamWorks Interactive 首席执行官。在 Zynga 和 Citigroup 等公司担任顾问。',
+    'Glenn Description': '联合创办了 PDI（此工作室制作发行过 <1>Shrek</1> 和 <3>Madagascar</3> 等动画系列）和 VanEdge Capital。DreamWorks Interactive 首席执行官。在 Zynga 和 Citigroup 等公司担任顾问。',
     'Stefan Title': '财务',
     'Stefan Description': 'Plenty（筹集了 2.26 亿美元 – Softbank）、ProsperWorks（筹集了 8600 万美元 – DHVC）和 Harvest Power（筹集了 2.24 亿美元 – Kleiner Perkins）高级副总裁。曾就读于伯克利大学经济学专业，并获得了沃顿商学院工商管理硕士学位',
     'Join Modal Title': '提前获得Marconi SDK 和产品更新',

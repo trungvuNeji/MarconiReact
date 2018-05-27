@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 import logo from "../../assets/images/svg/logo.svg";
 import email from "../../assets/images/svg/email-icon.svg";
 
@@ -34,10 +37,10 @@ class Footer extends Component {
                 </Link>
               </div>
               <ul>
-                <li><a href="https://docsend.com/view/5zragmb">White Paper</a></li>
-                <li><a href="#developers" data-scroll-nav="0" className="click-btn">Developers</a></li>
-                <li><a href="#technology" data-scroll-nav="1" className="click-btn">Core Tech</a></li>
-                <li><Link to="/team">Team</Link></li>
+                <li><a href="https://docsend.com/view/5zragmb"><Trans>Navigation 1</Trans></a></li>
+                <li><a href="#developers" data-scroll-nav="0" className="click-btn"><Trans>Navigation 2</Trans></a></li>
+                <li><a href="#technology" data-scroll-nav="1" className="click-btn"><Trans>Navigation 3</Trans></a></li>
+                <li><Link to="/team"><Trans>Navigation 4</Trans></Link></li>
               </ul>
               <span className="pull-right">
                 <img src={email} width="22px" height="17px" alt="" />
@@ -51,4 +54,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default translate("translations")(Footer);

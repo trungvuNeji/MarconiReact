@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 class AntiPhishing extends Component {
 
   render() {
     return (
-      <div id="tab3">
-        Analyze network traffic for phishing attacks such as masquerading URLs with unicode characters
+      <div id="tab3"><Trans>M3 Tab3 Description</Trans>
         <div className="col-lg-push-2 tab_03">
 
           <div className="tabs_listing desktop-code-sample">
@@ -57,4 +59,4 @@ class AntiPhishing extends Component {
   }
 }
 
-export default AntiPhishing;
+export default translate("translations")(AntiPhishing);

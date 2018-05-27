@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 class NetworkAdmin extends Component {
 
   render() {
     return (
-      <div id="tab1">
-        Establish policies to determine what type of traffic is permitted on the network
+      <div id="tab1"><Trans>M3 Tab2 Description</Trans>
         <div className="col-lg-push-2 tab_02">
 
           <div className="tabs_listing desktop-code-sample">
@@ -59,4 +61,4 @@ class NetworkAdmin extends Component {
   }
 }
 
-export default NetworkAdmin;
+export default translate("translations")(NetworkAdmin);

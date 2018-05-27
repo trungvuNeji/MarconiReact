@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 class NetworkCreation extends Component {
 
   render() {
     return (
-      <div id="tab2">
-        Spin up a new virtualized blockchain network in just a few lines of code
+      <div id="tab2"><Trans>M3 Tab1 Description</Trans>
         <div className="col-lg-push-2 tab_01">
 
           <div className="tabs_listing desktop-code-sample">
@@ -50,4 +52,4 @@ class NetworkCreation extends Component {
   }
 }
 
-export default NetworkCreation;
+export default translate("translations")(NetworkCreation);
