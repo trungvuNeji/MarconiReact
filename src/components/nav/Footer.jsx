@@ -34,6 +34,9 @@ class Footer extends Component {
                   <div className="copyright">
                     © 2018 Marconi Foundation
                   </div>
+                  <div class="legal-links">
+                    <Link to="/privacy">Privacy</Link><span> • </span><Link to="/terms">Terms of Service</Link>
+                  </div>
                 </Link>
               </div>
               <ul className="footer-nav">

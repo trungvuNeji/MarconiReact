@@ -43,9 +43,19 @@
   transition: all ease-in-out 0.9s;
 }
 
+.btn-default[disabled] {
+  background-color: #6e6e6e;
+}
+
+.btn-default[disabled]:hover {
+  color: #fff;
+  background-color: #6e6e6e;
+  /* border-color: #adadad; */
+  /* transition: all ease-in-out 0.9s; */
+}
+
 .btn-default:hover {
   color: #fff;
   background-color: #2a4d8c;
-  /* border-color: #adadad; */
   transition: all ease-in-out 0.9s;
 }

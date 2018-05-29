@@ -426,9 +426,10 @@ a:focus {
 
 #close {
   font-size: 0;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   background: url(../images/error.png) no-repeat;
+  background-size: cover;
   position: absolute;
   display: none;
   right: 25px;
@@ -438,7 +439,7 @@ a:focus {
 }
 
 .modal-dialog {
-  width: 29%;
+  /* width: 29%; */
 }
 
 .modal-header h4 {
@@ -703,6 +704,30 @@ a:focus {
   display: none;
 }
 
+/* Privacy Policy & TOS */
+
+.legal-box .separator {
+  margin-bottom: 50px;
+}
+
+.legal-copy {
+  text-align: left;
+  margin: auto;
+  padding: 0 10% 10% 10%;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.legal-copy p {
+  margin-bottom: 20px;
+  margin-top: 3px;
+}
+
+.legal-copy h4 {
+  margin: 20px 0 10px;
+  /* font-weight: 500; */
+}
+
 .team-small-box figure img {
   mix-blend-mode: luminosity;
   opacity: 1;
@@ -713,6 +738,10 @@ a:focus {
 
 .pull-right {
   padding-left: 70px;
+}
+
+.navbar-nav.pull-right {
+  padding-left: 0;
 }
 
 .pull-left {

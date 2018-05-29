@@ -8,6 +8,8 @@ import '../assets/css/all-stylesheets.css';
 import Footer from './nav/Footer';
 import TeamPage from './teampage/TeamPage';
 import HomePage from './homepage/HomePage';
+import TermsPage from './extrapage/TermsPage';
+import PrivacyPage from './extrapage/PrivacyPage';
 
 class App extends Component {
   
@@ -17,6 +19,8 @@ class App extends Component {
       <div>
         <Switch>
           <Route path='/team' component={TeamPage} />
+          <Route path="/terms" component={TermsPage} />
+          <Route path="/privacy" component={PrivacyPage} />
           <Route path="/" component={HomePage} />
         </Switch>
 

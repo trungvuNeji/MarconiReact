@@ -120,20 +120,16 @@
 
 /* Links inside the dropdown */
 
-.dropdown-content button {
+.dropdown-content a {
   color: black;
   padding: 0 14px;
   margin: 8px 0;
   text-decoration: none;
   display: block;
   font-size: 14px;
-  border-style: none;
-  background-color: #fff;
-  text-align: center;
-  margin: 8px auto;
 }
 
-.dropdown-content button:hover {
+#myDropdown a:hover {
   color: #0059c2;
   background: none;
   transition: all 0.4s ease-in-out;
@@ -143,11 +139,9 @@
   -o-transition: all 0.4s ease-in-out;
 }
 
-.dropdown-content button:focus,
-.dropdown-content button:active {
-  outline: 0;
-  border-style: none;
-}
+/* #lang-dropdown {
+  display: -webkit-inline-flex;
+} */
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 
@@ -166,4 +160,111 @@
   -moz-transition: all 0.6s ease-in-out;
   -ms-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
+}
+
+/* 
+@supports not (zoom:1.5) {
+  .input-group input[type=checkbox] {
+    transform: scale(1.5);
+  }
+}
+
+@supports (zoom:1.5) {
+  .input-group input[type=checkbox] {
+    zoom: 1.5;
+  }
+} */
+
+/* =============== 
+    GDPR Form 
+================ */
+
+.input-group input[type=checkbox] {
+  /* transform: scale(1.2); */
+  vertical-align: middle;
+  margin: 0;
+  background: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #6e6e6e;
+  border-radius: 3px;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 2px;
+}
+
+.input-group input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+.input-group input[type=checkbox]:checked {
+  background-image: url(../images/check.png);
+  background-size: cover;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.mc-field-group.input-group {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.mc-field-group.input-group label {
+  margin-bottom: 0;
+}
+
+.gdpr-text {
+  text-align: left;
+  /* margin: auto; */
+  /* max-width: 80%; */
+  font-size: 0.6em;
+  line-height: 1.5em;
+  margin-left: 31px;
+  /* margin-top: 15px; */
+}
+
+.mc-field-group {
+  /* min-width: 90%; */
+}
+
+.input-group label {
+  display: inline;
+  vertical-align: middle;
+}
+
+.sign-up-url,
+.gdpr-form,
+.gdpr-screen,
+.sub-confirm {
+  display: none;
+}
+
+.gdpr-cn label {
+  font-size: 1.2em;
+}
+
+.gdpr-text a {
+  text-decoration: underline;
+  color: #888a8a;
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+}
+
+.gdpr-text a:hover {
+  text-decoration: none;
+  color: #074cc4;
+  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+}
+
+.legal-links span {
+  vertical-align: middle;
 }

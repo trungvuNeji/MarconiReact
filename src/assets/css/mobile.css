@@ -16,7 +16,7 @@
     margin-top: 30px;
   }
   .modal-dialog {
-    width: 57%;
+    /* width: 57%; */
   }
   .main-navigation {
     max-width: 970px;
@@ -156,7 +156,7 @@
 
 @media screen and (max-width: 767px) {
   .modal-dialog {
-    width: 97%;
+    width: 95%;
   }
   .banner-heading,
   h1 {
@@ -253,11 +253,20 @@
   .logo-mobile-modal {
     padding: 0 30% !important;
   }
+  /* .input-group label {
+    font-size: 14px;
+  } */
 }
 
 @media screen and (max-width: 570px) {
   .logo-mobile-modal {
     padding: 0 26% !important;
+  }
+  .input-group input[type=checkbox] {
+    margin: 0;
+  }
+  .gdpr-text {
+    max-width: 90%;
   }
 }
 
@@ -265,6 +274,10 @@
   .tabs_listing ol li {
     /* padding-left: 10px; */
     font-size: 12px;
+  }
+  .input-group label {
+    /* font-size: 12px; */
+    word-wrap: break-word;
   }
 }
 
@@ -297,6 +310,12 @@
     padding-left: 10px;
     font-size: 10px;
   }
+  .input-group label {
+    font-size: 14px;
+  }
+  .gdpr-cn label {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -305,6 +324,9 @@
   }
   .box-holder {
     padding: 10px 2%;
+  }
+  .modal-footer .btn {
+    padding: 18px 40px;
   }
 }
 
