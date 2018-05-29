@@ -58,6 +58,7 @@
   margin: 0 2%;
   text-align: justify;
   text-align-last: center;
+  text-align: -webkit-center;
 }
 
 .spacer2 {

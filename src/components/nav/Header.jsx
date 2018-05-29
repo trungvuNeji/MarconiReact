@@ -208,15 +208,15 @@ class Header extends Component {
                 <li><a className="click-btn" href="#technology" data-scroll-nav="1"><Trans>Navigation 3</Trans></a></li>
                 <li><Link to='/team'><Trans>Navigation 4</Trans></Link></li>
                 <li><a href="mailto:hello@marconi.org"><Trans>Navigation 5</Trans></a></li>
-
-                <div id="lang-dropdown">
-                  <button onClick={this.toggleLanguageModal} className="dropbtn">
-                    <Language width={this.width} lang={language} /> 
-                    <i className="fa fa-caret-down dropbtn"></i>
-                  </button>
-                  {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
-                </div>
-
+                <li>
+                  <div id="lang-dropdown">
+                    <button onClick={this.toggleLanguageModal} className="dropbtn">
+                      <Language width={this.width} lang={language} /> 
+                      <i className="fa fa-caret-down dropbtn"></i>
+                    </button>
+                    {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
+                  </div>
+                </li>
               </ul>
               <a href="#" id="close" className="menuClose"><button onClick={this.toggleMobileNav}></button></a>
             </div>

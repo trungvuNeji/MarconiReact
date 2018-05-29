@@ -79,6 +79,12 @@
   padding: 0;
 }
 
+@media screen and (max-width: 1199px) {
+  .main-navigation .navbar-nav>li {
+    padding: 0 10px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .main-navigation .navbar-nav>li {
     padding: 0 8px;

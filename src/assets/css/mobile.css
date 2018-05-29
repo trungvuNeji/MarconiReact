@@ -67,6 +67,10 @@
   .text-box {
     text-align: justify;
     text-align-last: center;
+    text-align: -webkit-center;
+  }
+  .text-box h2 {
+    text-align: -webkit-center;
   }
   .text-box .btn1 {
     float: none;
@@ -269,6 +273,7 @@
     line-height: 38px;
     font-size: 26px;
     text-align: center;
+    text-align: -webkit-center;
   }
   .logo-mobile-modal {
     padding: 0 22% !important;
