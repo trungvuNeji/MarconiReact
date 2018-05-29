@@ -10,25 +10,31 @@ class TabContents extends Component {
     this.state = {
       change: false
     };
+
+    this.changeTab = this.changeTab.bind(this);
+  }
+
+  changeTab() {
+    let selected = this.props.selectedPane;
+    let content = '';
+    
+    if (selected === 0) {
+      return <NetworkAdmin />;
+    } 
+    else if (selected === 1) {
+      return <NetworkCreation />;
+    }
+    else {
+      return <AntiPhishing />;
+    }
+
   }
 
   render() {
-    let selected = this.props.selectedPane;
-    let content = '';
-
-    if (selected === 0) {
-      content = <NetworkAdmin />;
-    } 
-    else if (selected === 1) {
-      content = <NetworkCreation />;
-    }
-    else {
-      content = <AntiPhishing />;
-    }
 
     return (
       <div className="tab-content">
-        {content}
+        {this.changeTab()}
       </div>
     );
   }

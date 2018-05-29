@@ -14,13 +14,20 @@ class Developers extends Component {
     };
 
     this.selectTab = this.selectTab.bind(this);
+    this.onTabChange = this.onTabChange.bind(this);
   }
 
   selectTab(num) {
     this.setState({ selectedPane: num });
   }
+
+  onTabChange(event) {
+    let num = parseInt(event.target.value);
+    this.setState ({ selectedPane: num });
+    // this.selectTab(event.target.value);
+  }
   
-  render() {
+  render() {    
     return (
       <section className="content-box" data-scroll-index="0"><a id="developers"></a>
         <section className="container">
@@ -55,11 +62,18 @@ class Developers extends Component {
                     selectedPane={this.state.selectedPane} 
                     onTabChosen={this.selectTab}>
                   </TabHeaders>
-                  <select className="mb10 form-control visible-xs" id="tab_selector">
+
+                  <select 
+                    className="mb10 form-control visible-xs" 
+                    id="tab_selector"
+                    value={this.state.selectedPane}
+                    onChange={this.onTabChange}
+                    >
                     <option value="0"><Trans>M3 Tab2 Title</Trans></option>
                     <option value="1"><Trans>M3 Tab1 Title</Trans></option>
                     <option value="2"><Trans>M3 Tab3 Title</Trans></option>
                   </select>
+
                   <TabContents
                     selectedPane={this.state.selectedPane}>
                   </TabContents>
@@ -73,5 +87,17 @@ class Developers extends Component {
     );
   }
 }
+
+// class ChildOption extends Component {
+//   constructor(props) {
+//     super(props);
+//   }
+
+//   render() {
+//     return (
+//       <option value={this.props.value}>{this.props.name}</option>
+//     );
+//   }
+// }
 
 export default translate("translations")(Developers);
