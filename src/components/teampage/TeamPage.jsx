@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { translate, Trans } from 'react-i18next';
+import i18n from '../../utils/i18n';
+
 import Header from '../nav/Header';
 import CoreTeam from './CoreTeam';
 import Advisor from './Advisor';
@@ -8,6 +11,12 @@ class TeamPage extends Component {
 
   componentDidMount() {
     document.title = "Marconi - Team";
+
+    var language = i18n.language;
+    if (language === 'cn') {
+      document.title = "Marconi - 团队";
+    }
+
     window.scrollTo(0,0);
     
     var navBar = document.querySelector('.header-box');

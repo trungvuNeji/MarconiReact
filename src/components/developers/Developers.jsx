@@ -3,7 +3,8 @@ import TabHeaders from './TabHeaders';
 import TabContents from './TabContents';
 
 import { translate, Trans } from 'react-i18next';
-// import i18n from '../../utils/i18n';
+
+import separator from "../../assets/images/separator-image.png";
 
 class Developers extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Developers extends Component {
               <h1 className="black-text regular-font"><Trans>M3 Title</Trans></h1>
 
               <div className="separator">
-                <img src="assets/images/separator-image.png" alt="" />
+                <img src={separator} alt="" />
               </div>
 
               <div className="text-section col-lg-6 col-md-6 col-sm-12 col-xs-12 text-left">

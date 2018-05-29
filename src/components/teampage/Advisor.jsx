@@ -36,8 +36,8 @@ class Advisor extends Component {
               <img src={MatthewImg} className="profile-pic" alt="" />
             </figure>
             <h3>Matthew Liu
-              <span className="blue-text"><Trans>Matthew Title</Trans></span></h3>
-            <p><Trans>Matthew Description</Trans></p>
+              <span className="blue-text"><Trans>Matt Title</Trans></span></h3>
+            <p><Trans>Matt Description</Trans></p>
             <a href="https://www.linkedin.com/in/matthewliu/"> <i className="fab fa-linkedin-in"></i></a>
           </div>
           <div className="team-small-box">

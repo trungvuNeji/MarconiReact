@@ -10,6 +10,15 @@ import branchImg from "../../assets/images/svg/branch-chains.svg";
 
 class CoreTech extends Component {
 
+  componentDidMount() {
+    // Centering the packet img for mobile viewing
+    var width = window.innerWidth;
+    var packet = document.getElementsByClassName('packets')[0];
+    if (width < 992) {
+      packet.classList.remove('img-responsive');
+    }
+  }
+
   render() {
     return (
       <section className="content-box js-sticky" data-scroll-index="1"><a id="technology"></a>
