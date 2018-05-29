@@ -31,7 +31,7 @@ class Splash extends Component  {
       <div className="outer-box blue-bg col-xs-12 no-padding">
         <section className="container">
           <div className="row">
-            <Header />
+            <Header checkLanguage={this.props.checkLanguage}/>
             <Banner />
             <Modal />
           </div>

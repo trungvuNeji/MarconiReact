@@ -36,7 +36,7 @@ class Footer extends Component {
                   </div>
                 </Link>
               </div>
-              <ul>
+              <ul className="footer-nav">
                 <li><a href="https://docsend.com/view/5zragmb"><Trans>Navigation 1</Trans></a></li>
                 <li><a href="#developers" data-scroll-nav="0" className="click-btn"><Trans>Navigation 2</Trans></a></li>
                 <li><a href="#technology" data-scroll-nav="1" className="click-btn"><Trans>Navigation 3</Trans></a></li>

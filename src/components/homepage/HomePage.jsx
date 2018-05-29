@@ -8,6 +8,12 @@ import UseCases from './UseCases';
 import Developers from '../developers/Developers';
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.checkLanguage = this.checkLanguage.bind(this);
+  }
+
   componentDidMount() {
     document.title = "Marconi - Smart Ethernet Protocol";
 
@@ -31,12 +37,63 @@ class HomePage extends Component {
         // offset for the height of the navbar
       }, 0);
     }
+
+    this.checkLanguage();
+  }
+
+  checkLanguage() {
+    var lng = i18n.language;
+    // Fixing Chinese margin
+    var bannerHeading = document.querySelector('.banner-heading');
+    var navbarNav = document.querySelector('.navbar-nav');
+    var bannerText = document.querySelector('.banner-text');
+    var textSection = document.querySelector('.text-section');
+    var tabSection = document.querySelector('.tabs-section');
+    var footerNav = document.querySelector('.footer-nav');
+    var blueBtn = document.querySelector('.blue-btn');
+    var transparentBtn = document.querySelector('.transparent-btn');
+    var textBox = document.querySelector('.text-box');
+    var tabContent = document.querySelector('.tab-content');
+    var textSize = document.querySelector('.text-size');
+    var bottomTextBox = document.querySelector('.bottom-text-box');
+    // var gdprCN = document.querySelector('.mc-field-group.input-group');
+
+    if (lng === 'cn') {
+      bannerHeading.classList.add('banner-heading-cn');
+      navbarNav.classList.add('navbar-nav-cn');
+      bannerText.classList.add('banner-text-cn');
+      textSection.classList.add('text-section-cn');
+      tabSection.classList.add('text-section-cn');
+      footerNav.classList.add('footer-nav-cn');
+      blueBtn.classList.add('blue-btn-cn');
+      transparentBtn.classList.add('transparent-btn-cn');
+      textBox.classList.add('text-box-cn');
+      tabContent.classList.add('tab-content-cn');
+      textSize.classList.add('text-size-cn');
+      bottomTextBox.classList.add('bottom-text-box-cn');
+      // gdprCN.classList.add('gdpr-cn');
+    } 
+    else if (lng === 'en') {
+      bannerHeading.classList.remove('banner-heading-cn');
+      navbarNav.classList.remove('navbar-nav-cn');
+      bannerText.classList.remove('banner-text-cn');
+      textSection.classList.remove('text-section-cn');
+      tabSection.classList.remove('text-section-cn');
+      footerNav.classList.remove('footer-nav-cn');
+      blueBtn.classList.remove('blue-btn-cn');
+      transparentBtn.classList.remove('transparent-btn-cn');
+      textBox.classList.remove('text-box-cn');
+      tabContent.classList.remove('tab-content-cn');
+      textSize.classList.remove('text-size-cn');
+      bottomTextBox.classList.remove('bottom-text-box-cn');
+      // gdprCN.classList.remove('gdpr-cn');
+    }
   }
 
   render() {
     return (
       <div>
-        <Splash />
+        <Splash checkLanguage={this.checkLanguage}/>
         <CoreTech />
         <UseCases />
         <Developers />
