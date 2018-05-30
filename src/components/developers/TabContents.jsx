@@ -16,7 +16,7 @@ class TabContents extends Component {
 
   changeTab() {
     let selected = this.props.selectedPane;
-    let content = '';
+    // let content = '';
     
     if (selected === 0) {
       return <NetworkAdmin />;

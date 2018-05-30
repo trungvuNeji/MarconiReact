@@ -22,7 +22,7 @@ class Developers extends Component {
   }
 
   onTabChange(event) {
-    let num = parseInt(event.target.value);
+    let num = parseInt(event.target.value, 10);
     this.setState ({ selectedPane: num });
     // this.selectTab(event.target.value);
   }

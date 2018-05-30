@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { connect } from 'react-redux';
 import onClickOutside from 'react-onclickoutside';
 
 import { translate, Trans } from 'react-i18next';
@@ -61,7 +60,6 @@ class Header extends Component {
     this.toggleLanguageModal = this.toggleLanguageModal.bind(this);
     this.toggleState = this.toggleState.bind(this);
     this.changeLanguage = this.changeLanguage.bind(this);
-    // this.checkLanguage = this.checkLanguage.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggleMobileNav = this.toggleMobileNav.bind(this);
   }
@@ -73,55 +71,6 @@ class Header extends Component {
   componentDidMount() {
     // this.checkLanguage();
   }
-
-  // checkLanguage() {
-  //   var lng = i18n.language;
-  //   // Fixing Chinese margin
-  //   var bannerHeading = document.querySelector('.banner-heading');
-  //   var navbarNav = document.querySelector('.navbar-nav');
-  //   var bannerText = document.querySelector('.banner-text');
-  //   var textSection = document.querySelector('.text-section');
-  //   var tabSection = document.querySelector('.tabs-section');
-  //   var footerNav = document.querySelector('.footer-nav');
-  //   var blueBtn = document.querySelector('.blue-btn');
-  //   var transparentBtn = document.querySelector('.transparent-btn');
-  //   var textBox = document.querySelector('.text-box');
-  //   var tabContent = document.querySelector('.tab-content');
-  //   var textSize = document.querySelector('.text-size');
-  //   var bottomTextBox = document.querySelector('.bottom-text-box');
-  //   // var gdprCN = document.querySelector('.mc-field-group.input-group');
-
-  //   if (lng === 'cn') {
-  //     bannerHeading.classList.add('banner-heading-cn');
-  //     navbarNav.classList.add('navbar-nav-cn');
-  //     bannerText.classList.add('banner-text-cn');
-  //     textSection.classList.add('text-section-cn');
-  //     tabSection.classList.add('text-section-cn');
-  //     footerNav.classList.add('footer-nav-cn');
-  //     blueBtn.classList.add('blue-btn-cn');
-  //     transparentBtn.classList.add('transparent-btn-cn');
-  //     textBox.classList.add('text-box-cn');
-  //     tabContent.classList.add('tab-content-cn');
-  //     textSize.classList.add('text-size-cn');
-  //     bottomTextBox.classList.add('bottom-text-box-cn');
-  //     // gdprCN.classList.add('gdpr-cn');
-  //   } 
-  //   else if (lng === 'en') {
-  //     bannerHeading.classList.remove('banner-heading-cn');
-  //     navbarNav.classList.remove('navbar-nav-cn');
-  //     bannerText.classList.remove('banner-text-cn');
-  //     textSection.classList.remove('text-section-cn');
-  //     tabSection.classList.remove('text-section-cn');
-  //     footerNav.classList.remove('footer-nav-cn');
-  //     blueBtn.classList.remove('blue-btn-cn');
-  //     transparentBtn.classList.remove('transparent-btn-cn');
-  //     textBox.classList.remove('text-box-cn');
-  //     tabContent.classList.remove('tab-content-cn');
-  //     textSize.classList.remove('text-size-cn');
-  //     bottomTextBox.classList.remove('bottom-text-box-cn');
-  //     // gdprCN.classList.remove('gdpr-cn');
-  //   }
-  // }
 
   changeLanguage(lng) {
     i18n.changeLanguage(lng);    
@@ -160,7 +109,6 @@ class Header extends Component {
     if (!this.state.languageModal) {
       this.toggleLanguageModal();
     }
-   
   }
 
   toggleMobileNav() {
@@ -182,8 +130,6 @@ class Header extends Component {
                 className="navbar-toggle collapsed" 
                 id="menuButton"
                 onClick={this.toggleMobileNav} 
-                // data-toggle="collapse" 
-                // data-target="#bs-example-navbar-collapse-1" 
                 aria-expanded="false"> 
                 <span className="sr-only">close</span> 
                 <span className="icon-bar"></span> 
@@ -204,8 +150,12 @@ class Header extends Component {
               <ul className="nav navbar-nav pull-right regular-font ">
                 <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
                 <li><a href="https://docsend.com/view/5zragmb"><Trans>Navigation 1</Trans></a></li>
-                <li><a className="click-btn" href="#developers" data-scroll-nav="0"><Trans>Navigation 2</Trans></a></li>
-                <li><a className="click-btn" href="#technology" data-scroll-nav="1"><Trans>Navigation 3</Trans></a></li>
+                <li>
+                  <a className="click-btn nav-btn" href="#developers" onClick={this.toggleMobileNav}><Trans>Navigation 2</Trans></a>
+                </li>
+                <li>
+                  <a className="click-btn nav-btn" href="#technology" onClick={this.toggleMobileNav}><Trans>Navigation 3</Trans></a>
+                </li>
                 <li><Link to='/team'><Trans>Navigation 4</Trans></Link></li>
                 <li><a href="mailto:hello@marconi.org"><Trans>Navigation 5</Trans></a></li>
                 <li>

@@ -120,13 +120,15 @@
 
 /* Links inside the dropdown */
 
-.dropdown-content a {
+.dropdown-content button {
   color: black;
   padding: 0 14px;
-  margin: 8px 0;
+  margin: 8px auto;
   text-decoration: none;
   display: block;
   font-size: 14px;
+  background: none;
+  border: none;
 }
 
 #myDropdown a:hover {
@@ -267,4 +269,8 @@
 
 .legal-links span {
   vertical-align: middle;
+}
+
+.fade.in {
+  display: block;
 }

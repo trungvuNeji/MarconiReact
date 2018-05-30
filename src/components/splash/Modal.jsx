@@ -2,8 +2,31 @@ import React, { Component } from 'react';
 
 import { translate, Trans } from 'react-i18next';
 // import i18n from '../../utils/i18n';
+import Separator from "../../assets/images/separator-image.png";
 
 class Modal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      fullName: '',
+      organization: '',
+      interest: ''
+    };
+  }
+
+  joinName() {
+    return <Trans></Trans>;
+  }
+
+  joinOrg() {
+    return <Trans>Join Modal Organization</Trans>;
+  }
+
+  joinDesc() {
+    return <Trans>Join Modal Description</Trans>;
+  }
+
 
   render() {
     return (
@@ -12,22 +35,24 @@ class Modal extends Component {
 
           <div className="modal-content subscribe-modal">
             <form 
-              action="https://marconi.us17.list-manage.com/subscribe/post?u=f4163dd7d40ad21ea56e32016&amp;id=90c1bb666d" 
-              method="post" 
+              action="https://marconi.us17.list-manage.com/subscribe/post" 
+              method="POST" 
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
               noValidate>
+              <input type="hidden" name="u" value="f4163dd7d40ad21ea56e32016"/>
+              <input type="hidden" name="id" value="90c1bb666d"/>
 
               <div className="modal-header">
                 <button 
                   type="button" 
                   className="close"
-                  data-dismiss="modal"><i className="far fa-times-circle"></i>
+                  data-dismiss="modal"><i className="fa fa-times-circle-o"></i>
                 </button>
                 <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
-                  <img src="assets/images/separator-image.png" alt="" className="img-responsive" />
+                  <img src={Separator} alt="" className="img-responsive" />
                 </div>
               </div>
 
@@ -39,25 +64,31 @@ class Modal extends Component {
                     </div>
                     <input 
                       type="email" 
-                      value="" 
                       name="EMAIL"
+                      value={this.state.email}
+                      onChange={ (e) => {this.setState ({ email: e.target.value });} } 
                       className="form-control" 
                       id="mce-EMAIL" 
                       placeholder="E-mail*"
+                      autoCapitalize="off" 
+                      autoCorrect="off"
                       />
                   </div>
                   <div className="input-group">
                     <div className="input-group-addon">
                       <i className="fa fa-user"></i>
                     </div>
-                    <input 
-                      type="text" 
-                      value="" 
-                      name="FULLNAME" 
-                      className="form-control" 
-                      id="mce-FULLNAME" 
-                      placeholder={<Trans>Join Modal Name</Trans>}
-                      />
+                    <Trans i18nKey="Join Modal Name">
+                      <input 
+                        type="text" 
+                        name="FULLNAME" 
+                        value={this.state.fullName}
+                        onChange={ (e) => {this.setState ({ fullName: e.target.value });} }
+                        className="form-control" 
+                        id="mce-FULLNAME" 
+                        placeholder='Join Modal Name'
+                        />
+                    </Trans>
                   </div>
                   <div className="input-group">
                     <div className="input-group-addon">
@@ -65,20 +96,23 @@ class Modal extends Component {
                     </div>
                     <input 
                       type="text" 
-                      value="" 
                       name="ORG" 
+                      value={this.state.organization}
+                      onChange={ (e) => {this.setState ({ organization: e.target.value });} } 
                       className="form-control" 
                       id="mce-ORG" 
-                      placeholder={<Trans>Join Modal Organization</Trans>}
+                      placeholder={this.joinOrg}
                       />
                   </div>
                   <textarea 
                     className="form-control" 
                     rows="2" 
                     form="mc-embedded-subscribe-form" 
-                    name="INTEREST" 
+                    name="INTEREST"
+                    value={this.state.interest}
+                    onChange={ (e) => {this.setState ({ interest: e.target.value });} } 
                     id="mce-INTEREST" 
-                    placeholder={<Trans>Join Modal Description</Trans>}>
+                    placeholder={this.joinDesc}>
                   </textarea>
                 </div>
               </div>
@@ -97,8 +131,6 @@ class Modal extends Component {
 
           <div className="modal-content thanks-modal" id="thankyou">
             <form 
-              action="https://marconi.us17.list-manage.com/subscribe/post?u=f4163dd7d40ad21ea56e32016&amp;id=90c1bb666d" 
-              method="post" 
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 

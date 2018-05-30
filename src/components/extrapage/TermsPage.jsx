@@ -31,13 +31,13 @@ class TermsPage extends Component {
         <section className="content-box padding-top team-padding">
           <section className="container">
             <div className="row">
-              <div class="main-box text-center legal-box">
-                <h1 class="black-text regular-font">Terms of Service</h1>
-                <div class="separator">
+              <div className="main-box text-center legal-box">
+                <h1 className="black-text regular-font">Terms of Service</h1>
+                <div className="separator">
                   <img src={Separator} alt="" />
                 </div>
 
-                <div class="legal-copy">
+                <div className="legal-copy">
                   <h4>Agreement to Terms of Use</h4>
                   <p>By accessing this website (www.marconi.org) and any materials presented herein (the "Site"), you accept in their entirety and without modification the following terms and conditions pertaining to the use of the Site ("Terms of Use"). Marconi
                     reserves the right to change the terms, conditions and notices under which this Site is offered without notice at any time. You acknowledge and agree that Marconi may restrict, suspend or terminate the Terms of Use or your access to, and

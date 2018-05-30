@@ -33,7 +33,7 @@ class HomePage extends Component {
         const id = hash.replace('#/', '');
         const element = document.getElementById(id);
         if (element) element.scrollIntoView();
-        window.scrollBy(0, -90);
+        window.scrollBy(0, -120);
         // offset for the height of the navbar
       }, 0);
     }
@@ -51,7 +51,7 @@ class HomePage extends Component {
     var tabSection = document.querySelector('.tabs-section');
     var footerNav = document.querySelector('.footer-nav');
     var blueBtn = document.querySelector('.blue-btn');
-    var transparentBtn = document.querySelector('.transparent-btn');
+    // var transparentBtn = document.querySelector('.transparent-btn');
     var textBox = document.querySelector('.text-box');
     var tabContent = document.querySelector('.tab-content');
     var textSize = document.querySelector('.text-size');
@@ -66,7 +66,7 @@ class HomePage extends Component {
       tabSection.classList.add('text-section-cn');
       footerNav.classList.add('footer-nav-cn');
       blueBtn.classList.add('blue-btn-cn');
-      transparentBtn.classList.add('transparent-btn-cn');
+      // transparentBtn.classList.add('transparent-btn-cn');
       textBox.classList.add('text-box-cn');
       tabContent.classList.add('tab-content-cn');
       textSize.classList.add('text-size-cn');
@@ -81,7 +81,7 @@ class HomePage extends Component {
       tabSection.classList.remove('text-section-cn');
       footerNav.classList.remove('footer-nav-cn');
       blueBtn.classList.remove('blue-btn-cn');
-      transparentBtn.classList.remove('transparent-btn-cn');
+      // transparentBtn.classList.remove('transparent-btn-cn');
       textBox.classList.remove('text-box-cn');
       tabContent.classList.remove('tab-content-cn');
       textSize.classList.remove('text-size-cn');

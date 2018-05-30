@@ -31,13 +31,13 @@ class PrivacyPage extends Component {
         <section className="content-box padding-top team-padding">
           <section className="container">
             <div className="row">
-              <div class="main-box text-center legal-box">
-                <h1 class="black-text regular-font">Privacy Policy</h1>
-                <div class="separator">
+              <div className="main-box text-center legal-box">
+                <h1 className="black-text regular-font">Privacy Policy</h1>
+                <div className="separator">
                   <img src={Separator} alt="" />
                 </div>
 
-                <div class="legal-copy">
+                <div className="legal-copy">
                 <h4>Marconi Online Privacy Policy</h4>
                   <p>In using portions of the Site, Marconi may collect data, including personal information, about you as you use our websites and Solutions and interact with us. Such Personal Information may also include information obtained through certain
                     analytics processes performed on the Internet and/or may be related to signing up for a mailing list to use or help develop Marconi services or products.</p>
