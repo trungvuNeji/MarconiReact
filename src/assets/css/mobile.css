@@ -21,6 +21,10 @@
   .main-navigation {
     max-width: 970px;
   }
+  .fade.in {
+    width: 70%;
+    height: 80%;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -152,6 +156,9 @@
   .pull-left {
     padding-right: 15px;
   }
+  .fade.in {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -253,6 +260,10 @@
   .logo-mobile-modal {
     padding: 0 30% !important;
   }
+  .fade.in {
+    width: 90%;
+    height: 90%;
+  }
   /* .input-group label {
     font-size: 14px;
   } */
@@ -299,6 +310,10 @@
   }
   .box-holder {
     padding: 20px 2%;
+  }
+  .fade.in {
+    width: 100%;
+    height: 100%;
   }
 }
 

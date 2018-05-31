@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import onClickOutside from 'react-onclickoutside';
-
 import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
 

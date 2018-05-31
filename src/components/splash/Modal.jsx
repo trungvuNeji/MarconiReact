@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import onClickOutside from 'react-onclickoutside';
 import { translate, Trans } from 'react-i18next';
-// import i18n from '../../utils/i18n';
+import i18n from '../../utils/i18n';
+
 import Separator from "../../assets/images/separator-image.png";
 
 class Modal extends Component {
@@ -11,12 +12,22 @@ class Modal extends Component {
       email: '',
       fullName: '',
       organization: '',
-      interest: ''
+      interest: '',
+      language: i18n.language,
     };
+
+    this.toggleJoinModal = this.toggleJoinModal.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  toggleJoinModal() {
+    var modal = document.querySelector('.modal');
+    modal.classList.toggle('in');
   }
 
   joinName() {
-    return <Trans></Trans>;
+    // var lang = this.state.language;
+    return <Trans>Join Modal Name</Trans>;
   }
 
   joinOrg() {
@@ -27,8 +38,16 @@ class Modal extends Component {
     return <Trans>Join Modal Description</Trans>;
   }
 
+  handleClickOutside() {
+    var modal = document.querySelector('.modal');
+    
+    if (modal.classList.contains('in')) {
+      modal.classList.remove('in');
+    }
+  }
 
   render() {
+    
     return (
       <div className="modal fade" id="myModal" role="dialog">
         <div className="modal-dialog">
@@ -48,7 +67,8 @@ class Modal extends Component {
                 <button 
                   type="button" 
                   className="close"
-                  data-dismiss="modal"><i className="fa fa-times-circle-o"></i>
+                  data-dismiss="modal"
+                  onClick={this.toggleJoinModal}><i className="fa fa-times-circle-o"></i>
                 </button>
                 <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
@@ -78,7 +98,7 @@ class Modal extends Component {
                     <div className="input-group-addon">
                       <i className="fa fa-user"></i>
                     </div>
-                    <Trans i18nKey="Join Modal Name">
+                    
                       <input 
                         type="text" 
                         name="FULLNAME" 
@@ -86,9 +106,8 @@ class Modal extends Component {
                         onChange={ (e) => {this.setState ({ fullName: e.target.value });} }
                         className="form-control" 
                         id="mce-FULLNAME" 
-                        placeholder='Join Modal Name'
+                        placeholder='Full Name*'
                         />
-                    </Trans>
                   </div>
                   <div className="input-group">
                     <div className="input-group-addon">
@@ -101,7 +120,7 @@ class Modal extends Component {
                       onChange={ (e) => {this.setState ({ organization: e.target.value });} } 
                       className="form-control" 
                       id="mce-ORG" 
-                      placeholder={this.joinOrg}
+                      placeholder='Organization'
                       />
                   </div>
                   <textarea 
@@ -112,7 +131,7 @@ class Modal extends Component {
                     value={this.state.interest}
                     onChange={ (e) => {this.setState ({ interest: e.target.value });} } 
                     id="mce-INTEREST" 
-                    placeholder={this.joinDesc}>
+                    placeholder='why are you interested?'>
                   </textarea>
                 </div>
               </div>
@@ -120,7 +139,7 @@ class Modal extends Component {
               <div className="modal-footer">
                 <input 
                   type="submit" 
-                  value={<Trans>CTA 1</Trans>} 
+                  value='Join Community'
                   name="subscribe" 
                   id="mc-embedded-subscribe" 
                   className="btn btn-default"
@@ -159,4 +178,4 @@ class Modal extends Component {
   }
 }
 
-export default translate("translations")(Modal);
+export default translate("translations")(onClickOutside(Modal));
