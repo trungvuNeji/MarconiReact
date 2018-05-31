@@ -36,7 +36,6 @@ class Modal extends Component {
   }
 
   render() {
-    console.log(window.location.pathname);
     const joinName = i18n.t('Join Modal Name');
     const joinOrg = i18n.t('Join Modal Organization');
     const joinDesc = i18n.t('Join Modal Description');

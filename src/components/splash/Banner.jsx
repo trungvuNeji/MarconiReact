@@ -31,7 +31,7 @@ class Banner extends Component {
             <div className="blue-btn btn1 joinBtn" data-toggle="modal" data-target="#myModal">
               <a href="#" onClick={this.toggleJoinModal}><Trans>CTA 1</Trans></a> 
             </div> 
-            <div></div>       
+            <div className="transparent-btn btn2"><a className="click-btn" href="#samplecode" data-scroll-nav="2">View Sample Code</a> </div>       
           </div>
 
           <figure className="banner-image col-lg-6 col-md-5 col-sm-12 col-xs-12">
