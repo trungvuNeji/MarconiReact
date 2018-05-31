@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import onClickOutside from 'react-onclickoutside';
 import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -13,6 +14,7 @@ class Modal extends Component {
       fullName: '',
       organization: '',
       interest: '',
+      loc: 'hero-text',
       language: i18n.language,
     };
 
@@ -25,19 +27,6 @@ class Modal extends Component {
     modal.classList.toggle('in');
   }
 
-  joinName() {
-    // var lang = this.state.language;
-    return <Trans>Join Modal Name</Trans>;
-  }
-
-  joinOrg() {
-    return <Trans>Join Modal Organization</Trans>;
-  }
-
-  joinDesc() {
-    return <Trans>Join Modal Description</Trans>;
-  }
-
   handleClickOutside() {
     var modal = document.querySelector('.modal');
     
@@ -47,6 +36,10 @@ class Modal extends Component {
   }
 
   render() {
+    console.log(window.location.pathname);
+    const joinName = i18n.t('Join Modal Name');
+    const joinOrg = i18n.t('Join Modal Organization');
+    const joinDesc = i18n.t('Join Modal Description');
     
     return (
       <div className="modal fade" id="myModal" role="dialog">
@@ -78,6 +71,7 @@ class Modal extends Component {
 
               <div className="modal-body">
                 <div className="form-group">
+
                   <div className="input-group">
                     <div className="input-group-addon">
                       <i className="fa fa-envelope"></i>
@@ -94,21 +88,22 @@ class Modal extends Component {
                       autoCorrect="off"
                       />
                   </div>
+
                   <div className="input-group">
                     <div className="input-group-addon">
                       <i className="fa fa-user"></i>
                     </div>
-                    
-                      <input 
-                        type="text" 
-                        name="FULLNAME" 
-                        value={this.state.fullName}
-                        onChange={ (e) => {this.setState ({ fullName: e.target.value });} }
-                        className="form-control" 
-                        id="mce-FULLNAME" 
-                        placeholder='Full Name*'
-                        />
+                    <input 
+                      type="text" 
+                      name="FULLNAME" 
+                      value={this.state.fullName}
+                      onChange={ (e) => {this.setState ({ fullName: e.target.value });} }
+                      className="form-control" 
+                      id="mce-FULLNAME" 
+                      placeholder={joinName}
+                      />
                   </div>
+
                   <div className="input-group">
                     <div className="input-group-addon">
                       <i className="fa fa-globe"></i>
@@ -120,9 +115,10 @@ class Modal extends Component {
                       onChange={ (e) => {this.setState ({ organization: e.target.value });} } 
                       className="form-control" 
                       id="mce-ORG" 
-                      placeholder='Organization'
+                      placeholder={joinOrg}
                       />
                   </div>
+
                   <textarea 
                     className="form-control" 
                     rows="2" 
@@ -131,8 +127,57 @@ class Modal extends Component {
                     value={this.state.interest}
                     onChange={ (e) => {this.setState ({ interest: e.target.value });} } 
                     id="mce-INTEREST" 
-                    placeholder='why are you interested?'>
+                    placeholder={joinDesc}>
                   </textarea>
+
+                  <div className="mc-field-group sign-up-url">
+                    <label htmlFor="mce-SIGNUP_URL">Signup Page URL </label>
+                    <input 
+                      type="text" 
+                      value={this.state.loc}
+                      name="SIGNUP_URL" 
+                      className="" 
+                      id="mce-SIGNUP_URL"
+                      readOnly/>
+                  </div>
+
+                  <div className="mc-field-group input-group">
+                    <input 
+                      type="checkbox" 
+                      value="True" 
+                      name="MMERGE12" 
+                      id="mce-MMERGE12-0" 
+                      required/>
+                    <label htmlFor="mce-MMERGE12-0">
+                      <span>&nbsp;</span><Trans>GDPR Confirm</Trans>
+                    </label>
+                  </div>
+
+                  <div className="input-group gdpr-text">
+                    <p><Trans i18nKey='GDPR Text'>I understand the Marconi Foundation will store my information to send these updates. I have read the <Link to="/privacy">Privacy Policy</Link> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.</Trans></p>
+                  </div>
+
+                  <div className="mc-field-group sub-confirm">
+                    <label htmlFor="mce-MMERGE15">Subscriber's Confirmation </label>
+                    <input 
+                      type="text" 
+                      value="" 
+                      name="MMERGE15" 
+                      className="" 
+                      id="mce-MMERGE15"/>
+                  </div>
+
+                  <div className="mc-field-group gdpr-screen">
+                    <label htmlFor="mce-MMERGE14">GDPR Consent </label>
+                    <input 
+                      type="url" 
+                      value="https://drive.google.com/file/d/1k6RGmR7jDPQW7deCZOe2iyAfht-I8LDC/view"
+                      name="MMERGE14" 
+                      className="url" 
+                      id="mce-MMERGE14"
+                      readOnly/>
+                  </div>
+
                 </div>
               </div>
 

@@ -79,10 +79,12 @@ export const en = {
     'Stefan Title': 'Finance',
     'Stefan Description': 'Senior VP at Plenty ($226M raised – Softbank), ProsperWorks  ($86M raised – DHVC) and Harvest Power ($224M raised – Kleiner Perkins). Econ at UCBerkeley, MBA from Wharton',
     'Join Modal Title': 'Get early access to the Marconi SDK and the latest product updates',
-    'Join Modal Name': 'Full name',
+    'Join Modal Name': 'Full name*',
     'Join Modal Organization': 'Organization',
     'Join Modal Description': 'Why are you interested?',
     'Thanks Modal title': 'Thank You!',
-    'Thanks Modal welcome': 'Welcome to the Marconi community'
+    'Thanks Modal welcome': 'Welcome to the Marconi community',
+    'GDPR Confirm': 'I want to receive product updates over email.',
+    'GDPR Text': 'I understand the Marconi Foundation will store my information to send these updates. I have read the <1>Privacy Policy</1> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.'
   }
 };

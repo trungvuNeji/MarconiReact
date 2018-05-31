@@ -79,10 +79,12 @@ export const cn = {
     'Stefan Title': '财务',
     'Stefan Description': 'Plenty（筹集了 2.26 亿美元 – Softbank）、ProsperWorks（筹集了 8600 万美元 – DHVC）和 Harvest Power（筹集了 2.24 亿美元 – Kleiner Perkins）高级副总裁。曾就读于伯克利大学经济学专业，并获得了沃顿商学院工商管理硕士学位',
     'Join Modal Title': '提前获得Marconi SDK 和产品更新',
-    'Join Modal Name': '名字',
+    'Join Modal Name': '名字*',
     'Join Modal Organization': '组织',
     'Join Modal Description': '为什么感兴趣？',
     'Thanks Modal title': '谢谢！',
-    'Thanks Modal welcome': '欢迎来到 Marconi 社团'
+    'Thanks Modal welcome': '欢迎来到 Marconi 社团',
+    'GDPR Confirm': '我想接收产品信息的电子邮件',
+    'GDPR Text': '我了解 Marconi 基金会将存储我的信息以发送这些产品信息。我已阅读<1>隐私政策</1>，并可通过电子邮件选择 “取消订阅” 来退出接收新的产品信息。选择退出后，个人信息将不会被收集，任何以前收集的个人信息将被删除。'
   }
 };
