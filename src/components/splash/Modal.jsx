@@ -207,7 +207,7 @@ class Modal extends Component {
                 </button>
                 <h2 className="modal-title"><Trans>Thanks Modal title</Trans></h2>
                 <div className="separator">
-                  <img src="assets/images/separator-image.png" alt="" className="img-responsive" />
+                  <img src={Separator} alt="" className="img-responsive" />
                 </div>
               </div>
               <div className="modal-body">

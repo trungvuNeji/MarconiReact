@@ -17,13 +17,16 @@ class HomePage extends Component {
   componentDidMount() {
     document.title = "Marconi - Smart Ethernet Protocol";
 
+    // Switch title of the page upon changing language
     var language = i18n.language;
     if (language === 'cn') {
       document.title = "Marconi - 智能以太网协议";
     }
 
+    // Scroll to top
     window.scrollTo(0,0);
 
+    // Navigate to correct section if coming from other pages
     const { hash } = window.location;
     if (hash !== '') {
       // Push onto callback queue so it runs after the DOM is updated,
@@ -36,6 +39,29 @@ class HomePage extends Component {
         window.scrollBy(0, -120);
         // offset for the height of the navbar
       }, 0);
+    }
+
+    // For the thank you modal
+    var subscribe = document.getElementsByClassName('subscribe-modal')[0];
+    var thanks = document.getElementsByClassName('thanks-modal')[0];
+    var close = document.getElementsByClassName('close')[0];
+    // var join = document.getElementsByClassName('joinBtn')[0];
+
+    if (hash === '#/thankyou') {
+      window.setTimeout(function() {
+        subscribe.classList.add('hide');
+        thanks.classList.add('reveal');
+        close.click();
+
+        setTimeout(function() {
+          close.click();
+        }, 2000);
+
+        setTimeout(function() {
+          thanks.classList.remove('reveal');
+          subscribe.classList.remove('hide');
+        }, 3000);
+      }, 1000);
     }
 
     this.checkLanguage();
