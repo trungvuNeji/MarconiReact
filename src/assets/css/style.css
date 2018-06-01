@@ -424,18 +424,18 @@ a:focus {
   margin-bottom: 130px;
 }
 
-#close {
-  font-size: 0;
+#close-nav {
+  font-size: 20px;
   height: 18px;
   width: 18px;
-  background: url(../images/error.png) no-repeat;
-  background-size: cover;
+  /* background: url(../images/error.png) no-repeat; */
+  /* background-size: cover; */
   position: absolute;
   display: none;
   right: 25px;
   left: auto;
-  content: "";
   top: 25px;
+  color: #888a8a;
 }
 
 .modal-dialog {

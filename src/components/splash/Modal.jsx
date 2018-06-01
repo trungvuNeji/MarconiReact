@@ -15,11 +15,14 @@ class Modal extends Component {
       organization: '',
       interest: '',
       loc: 'hero-text',
+      check: false,
       language: i18n.language,
+      toggle: false
     };
 
     this.toggleJoinModal = this.toggleJoinModal.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.checkInput = this.checkInput.bind(this);
   }
 
   toggleJoinModal() {
@@ -32,6 +35,23 @@ class Modal extends Component {
     
     if (modal.classList.contains('in')) {
       modal.classList.remove('in');
+    }
+  }
+
+  // Disable/Enable the Join button
+  checkInput() {
+    var btnSubmit = document.querySelector('.btn-submit');
+    var checkBox = document.querySelector('#mce-MMERGE12-0');
+    
+    if (
+      this.state.email.length > 0 &&
+      this.state.email.includes('@') &&
+      this.state.fullName.length > 0 &&
+      checkBox.checked
+    ) {
+      btnSubmit.disabled = false;
+    } else {
+      btnSubmit.disabled = true;
     }
   }
 
@@ -51,6 +71,7 @@ class Modal extends Component {
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
+              onChange={this.checkInput}
               noValidate>
               <input type="hidden" name="u" value="f4163dd7d40ad21ea56e32016"/>
               <input type="hidden" name="id" value="90c1bb666d"/>
@@ -60,7 +81,7 @@ class Modal extends Component {
                   type="button" 
                   className="close"
                   data-dismiss="modal"
-                  onClick={this.toggleJoinModal}><i className="fa fa-times-circle-o"></i>
+                  onClick={this.toggleJoinModal}><i className="fa fa-times-circle"></i>
                 </button>
                 <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
@@ -79,7 +100,7 @@ class Modal extends Component {
                       type="email" 
                       name="EMAIL"
                       value={this.state.email}
-                      onChange={ (e) => {this.setState ({ email: e.target.value });} } 
+                      onChange={ (e) => this.setState ({ email: e.target.value }) } 
                       className="form-control" 
                       id="mce-EMAIL" 
                       placeholder="E-mail*"
@@ -96,7 +117,7 @@ class Modal extends Component {
                       type="text" 
                       name="FULLNAME" 
                       value={this.state.fullName}
-                      onChange={ (e) => {this.setState ({ fullName: e.target.value });} }
+                      onChange={ (e) => this.setState ({ fullName: e.target.value }) }
                       className="form-control" 
                       id="mce-FULLNAME" 
                       placeholder={joinName}
@@ -111,7 +132,7 @@ class Modal extends Component {
                       type="text" 
                       name="ORG" 
                       value={this.state.organization}
-                      onChange={ (e) => {this.setState ({ organization: e.target.value });} } 
+                      onChange={ (e) => this.setState ({ organization: e.target.value }) } 
                       className="form-control" 
                       id="mce-ORG" 
                       placeholder={joinOrg}
@@ -124,7 +145,7 @@ class Modal extends Component {
                     form="mc-embedded-subscribe-form" 
                     name="INTEREST"
                     value={this.state.interest}
-                    onChange={ (e) => {this.setState ({ interest: e.target.value });} } 
+                    onChange={ (e) => this.setState ({ interest: e.target.value }) } 
                     id="mce-INTEREST" 
                     placeholder={joinDesc}>
                   </textarea>
@@ -145,7 +166,7 @@ class Modal extends Component {
                       type="checkbox" 
                       value="True" 
                       name="MMERGE12" 
-                      id="mce-MMERGE12-0" 
+                      id="mce-MMERGE12-0"
                       required/>
                     <label htmlFor="mce-MMERGE12-0">
                       <span>&nbsp;</span><Trans>GDPR Confirm</Trans>
@@ -186,7 +207,8 @@ class Modal extends Component {
                   value='Join Community'
                   name="subscribe" 
                   id="mc-embedded-subscribe" 
-                  className="btn btn-default"
+                  className="btn btn-default btn-submit"
+                  disabled="true"
                   />
               </div>
             </form>
@@ -203,7 +225,7 @@ class Modal extends Component {
                 <button 
                   type="button" 
                   className="close" 
-                  data-dismiss="modal">&times;
+                  data-dismiss="modal"><i className="fa fa-times-circle"></i>
                 </button>
                 <h2 className="modal-title"><Trans>Thanks Modal title</Trans></h2>
                 <div className="separator">

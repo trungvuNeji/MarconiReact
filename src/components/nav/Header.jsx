@@ -87,23 +87,6 @@ class Header extends Component {
 
   // Close the modal when clicking outsite of it
   handleClickOutside() {
-    // Change the default language shown after closing the language modal
-    // if (this.width > 767) {    
-    //   var dropDown = document.getElementById("myDropdown");
-    //   var defaultLanguage = document.getElementsByClassName(this.language + "-btn");
-    //   // remove that language from the list
-    //   var item = defaultLanguage[1];
-    //   item.parentNode.removeChild(item);
-    //   // prepend it back onto the list
-    //   dropDown.prepend(item);
-    // } else {
-    //   var dropDownMobile = document.getElementById("myDropdown-mobile");
-    //   var defaultLanguageMobile = document.getElementsByClassName(this.language + "-btn-mobile");
-  
-    //   defaultLanguageMobile[0].parentNode.removeChild(defaultLanguageMobile[0]);
-    //   dropDownMobile.prepend(defaultLanguageMobile[0]);
-    // }
-     
     // Closing modal
     if (!this.state.languageModal) {
       this.toggleLanguageModal();
@@ -129,7 +112,7 @@ class Header extends Component {
                 className="navbar-toggle collapsed" 
                 id="menuButton"
                 onClick={this.toggleMobileNav} 
-                aria-expanded="false"> 
+                aria-expanded="false">
                 <span className="sr-only">close</span> 
                 <span className="icon-bar"></span> 
                 <span className="icon-bar"></span> 
@@ -167,7 +150,7 @@ class Header extends Component {
                   </div>
                 </li>
               </ul>
-              <a href="#" id="close" className="menuClose"><button onClick={this.toggleMobileNav}></button></a>
+              <a href="#" id="close-nav" className="menuClose"><button onClick={this.toggleMobileNav}><i className="fa fa-times-circle"></i></button></a>
             </div>
 
           </div>

@@ -240,18 +240,8 @@
     border-radius: 0px;
   }
   .main-navigation .navbar-nav>li:last-child a {}
-  #close {
-    text-align: center;
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 100%;
-    top: 10px;
-    font-size: 18px;
+  #close-nav {
     display: block !important;
-    color: #074cc4;
-    font-weight: 400;
   }
   #lang-dropdown {
     display: none;
