@@ -42,9 +42,11 @@ class HomePage extends Component {
     }
 
     // For the thank you modal
-    var subscribe = document.getElementsByClassName('subscribe-modal')[0];
-    var thanks = document.getElementsByClassName('thanks-modal')[0];
-    var close = document.getElementsByClassName('close')[0];
+    var subscribe = document.querySelector('.subscribe-modal');
+    var thanks = document.querySelector('.thanks-modal');
+    var close = document.querySelector('.close');
+    var backdrop = document.querySelector('.backdrop');
+
     // var join = document.getElementsByClassName('joinBtn')[0];
 
     if (hash === '#/thankyou') {
@@ -52,9 +54,11 @@ class HomePage extends Component {
         subscribe.classList.add('hide');
         thanks.classList.add('reveal');
         close.click();
+        backdrop.classList.add('modal-backdrop', 'fade', 'in');
 
         setTimeout(function() {
           close.click();
+          backdrop.classList.remove('modal-backdrop', 'fade', 'in');
         }, 2000);
 
         setTimeout(function() {

@@ -11,11 +11,18 @@ class Banner extends Component {
     super(props);
 
     this.toggleJoinModal = this.toggleJoinModal.bind(this);
+    this.toggleBackDrop = this.toggleBackDrop.bind(this);
   }
 
   toggleJoinModal() {
     var modal = document.querySelector('.modal');
     modal.classList.toggle('in');
+    this.toggleBackDrop();
+  }
+
+  toggleBackDrop() {
+    var backdrop = document.querySelector('.backdrop');
+    backdrop.classList.add('modal-backdrop', 'fade', 'in');
   }
 
   render() {

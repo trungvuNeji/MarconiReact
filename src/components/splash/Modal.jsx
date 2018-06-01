@@ -27,14 +27,22 @@ class Modal extends Component {
 
   toggleJoinModal() {
     var modal = document.querySelector('.modal');
-    modal.classList.toggle('in');
+
+    if (modal.classList.contains('in')) {
+      modal.classList.remove('in');
+
+      var backdrop = document.querySelector('.backdrop');
+      backdrop.classList.remove('modal-backdrop', 'fade', 'in');
+    } else {
+      modal.classList.add('in');
+    }
   }
 
   handleClickOutside() {
     var modal = document.querySelector('.modal');
     
     if (modal.classList.contains('in')) {
-      modal.classList.remove('in');
+      this.toggleJoinModal();
     }
   }
 

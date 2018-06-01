@@ -182,7 +182,7 @@
     GDPR Form 
 ================ */
 
-.input-group input[type=checkbox] {
+.input-group input[type='checkbox'] {
   /* transform: scale(1.2); */
   vertical-align: middle;
   margin: 0;
@@ -198,11 +198,11 @@
   margin-bottom: 2px;
 }
 
-.input-group input[type=checkbox]:hover {
+.input-group input[type='checkbox']:hover {
   cursor: pointer;
 }
 
-.input-group input[type=checkbox]:checked {
+.input-group input[type='checkbox']:checked {
   background-image: url(../images/check.png);
   background-size: cover;
   box-sizing: border-box;
@@ -273,14 +273,36 @@
   vertical-align: middle;
 }
 
-.fade.in {
+.modal.fade.in {
   display: block;
   width: 60%;
   max-height: 760px;
   margin: 0 auto;
   z-index: 9999;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+}
+
+.modal,
+.backdrop {
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
 }
 
 .input-group-addon i {
   min-width: 17px;
+}
+
+.modal-backdrop.fade.in {
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
 }

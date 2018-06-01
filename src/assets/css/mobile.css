@@ -21,7 +21,7 @@
   .main-navigation {
     max-width: 970px;
   }
-  .fade.in {
+  .modal.fade.in {
     width: 70%;
     /* height: 80%; */
   }
@@ -156,7 +156,7 @@
   .pull-left {
     padding-right: 15px;
   }
-  .fade.in {
+  .modal.fade.in {
     width: 80%;
   }
 }
@@ -260,7 +260,7 @@
   .logo-mobile-modal {
     padding: 0 30% !important;
   }
-  .fade.in {
+  .modal.fade.in {
     width: 90%;
     max-height: 80%;
   }
@@ -311,7 +311,7 @@
   .box-holder {
     padding: 20px 2%;
   }
-  .fade.in {
+  .modal.fade.in {
     width: 100%;
     /* height: 100%; */
   }
@@ -361,7 +361,7 @@
     padding-left: 5px;
     font-size: 9px;
   }
-  .fade.in {
+  .modal.fade.in {
     /* width: 90%; */
     max-height: 90%;
   }
