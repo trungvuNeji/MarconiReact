@@ -7,20 +7,6 @@ import heroImage from "../../assets/images/svg/heroimage.svg";
 
 /* <div className="transparent-btn btn2"><a className="click-btn" href="#samplecode" data-scroll-nav="2"><Trans>CTA 2</Trans></a></div> */
 class Banner extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  // toggleJoinModal() {
-  //   var modal = document.querySelector('.modal');
-  //   modal.classList.toggle('in');
-  //   this.toggleBackDrop();
-  // }
-
-  // toggleBackDrop() {
-  //   var backdrop = document.querySelector('.backdrop');
-  //   backdrop.classList.add('modal-backdrop', 'fade', 'in');
-  // }
 
   render() {
     return (
