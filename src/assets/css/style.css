@@ -619,9 +619,7 @@ a:focus {
   width: 30px;
   height: 30px;
   color: #888a8a;
-  /* border: 2px solid  #fff ; */
-  /* border-radius: 100%; */
-  /* background: #3b3b3b; */
+  outline: none;
   opacity: 1;
   top: 5px;
   /* color: #fff; */

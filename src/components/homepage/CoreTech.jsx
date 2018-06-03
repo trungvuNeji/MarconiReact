@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { translate, Trans } from 'react-i18next';
-// import i18n from '../../utils/i18n';
+import i18n from '../../utils/i18n';
 
 import separator from "../../assets/images/separator-image.png";
 import ethernetImg from "../../assets/images/svg/ethernet-level.svg";
@@ -20,6 +20,8 @@ class CoreTech extends Component {
   }
 
   render() {
+    const whitePaperLink = i18n.t('White Paper Link');
+
     return (
       <section className="content-box js-sticky" data-scroll-index="1"><a id="technology"></a>
         <section className="container">
@@ -68,7 +70,7 @@ class CoreTech extends Component {
               <div className="bottom-text-box col-xs-12">
                 <p><Trans>Learn More Prompt</Trans></p>
                 <div className="blue-btn btn1">
-                  <a href="https://docsend.com/view/5zragmb"><Trans>Learn More CTA</Trans></a> 
+                  <a href={whitePaperLink}><Trans>Learn More CTA</Trans></a> 
                 </div>
               </div>
 

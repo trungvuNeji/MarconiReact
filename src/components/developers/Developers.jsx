@@ -51,7 +51,11 @@ class Developers extends Component {
                 <p><Trans>M3 Description 3</Trans></p>
                 <p><span className="darkgrey-text bold-font text-uppercase"> <Trans>M3 CTA Prompt</Trans></span></p>
                 <div className="clearfix"></div>
-                <div className="blue-btn btn1" data-toggle="modal" data-target="#myModal"><a href="#"><Trans>M3 CTA 1</Trans></a> </div>
+                <div 
+                  className="blue-btn btn1" 
+                  data-toggle="modal" 
+                  data-target="#myModal"
+                  onClick={this.props.toggleJoinModal}><a href="#"><Trans>M3 CTA 1</Trans></a> </div>
               </div>
 
               <div className="tabs-section col-xs-12 no-padding padding-top" data-scroll-index="2"><a id="samplecode"></a>
@@ -87,17 +91,5 @@ class Developers extends Component {
     );
   }
 }
-
-// class ChildOption extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//       <option value={this.props.value}>{this.props.name}</option>
-//     );
-//   }
-// }
 
 export default translate("translations")(Developers);

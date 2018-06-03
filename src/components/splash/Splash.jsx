@@ -32,7 +32,7 @@ class Splash extends Component  {
         <section className="container">
           <div className="row">
             <Header checkLanguage={this.props.checkLanguage}/>
-            <Banner />
+            <Banner toggleJoinModal={this.props.toggleJoinModal}/>
             <Modal />
           </div>
         </section>

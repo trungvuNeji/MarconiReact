@@ -100,6 +100,7 @@ class Header extends Component {
 
   render() {
     const { language } = i18n;
+    const whitePaperLink = i18n.t('White Paper Link');
     
     return (
       <div className="header-box col-xs-12 no-padding">
@@ -131,7 +132,7 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav pull-right regular-font ">
                 <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
-                <li><a href="https://docsend.com/view/5zragmb"><Trans>Navigation 1</Trans></a></li>
+                <li><a href={whitePaperLink}><Trans>Navigation 1</Trans></a></li>
                 <li>
                   <a className="click-btn nav-btn" href="#developers" onClick={this.toggleMobileNav}><Trans>Navigation 2</Trans></a>
                 </li>
