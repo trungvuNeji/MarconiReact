@@ -38,9 +38,7 @@ class Footer extends Component {
                   </div>
                 </Link>
                 <div className="legal-links">
-                  <Link to="/privacy">Privacy</Link>
-                  <span> • </span>
-                  <Link to="/terms">Terms of Service</Link>
+                  <Link to="/privacy">Privacy</Link> • <Link to="/terms">Terms of Service</Link>
                 </div>
                 
               </div>
