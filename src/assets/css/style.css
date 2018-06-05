@@ -45,9 +45,6 @@ a {
   color: #28c2ec;
   text-decoration: none;
   -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
 
@@ -115,6 +112,11 @@ a:focus {
   margin-top: -50px;
 }
 
+.banner-image img {
+  width: 630px;
+  height: auto;
+}
+
 /******* technology area **********/
 
 .text-box .btn1 {
@@ -175,12 +177,13 @@ a:focus {
 /********* case-box **************/
 
 .case-box {
-  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -188,16 +191,15 @@ a:focus {
   padding: 36px 20px;
   line-height: 26px;
   /* flexbox */
-  -webkit-flex: 1;
   -webkit-box-flex: 1;
   -moz-flex: 1;
-  -moz-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   float: left;
   margin-right: 3%;
   background: #fff;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
   box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
 }
 
@@ -213,7 +215,15 @@ a:focus {
 .small-box figure {
   margin: 0 auto 28px;
   min-height: 82px;
+  -webkit-transition: all ease-in-out 0.6s;
   transition: all ease-in-out 0.6s;
+}
+
+.small-box p {
+  text-align-last: center;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: justify;
 }
 
 .case-section .separator {
@@ -276,6 +286,7 @@ a:focus {
   width: 65%;
   border-radius: 32px;
   display: inline-block;
+  -webkit-box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
   box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
 }
 
@@ -306,6 +317,7 @@ a:focus {
   background: none;
   position: relative;
   color: #2558c1;
+  -webkit-box-shadow: 0px -2px 0 0 #2558c1 inset;
   box-shadow: 0px -2px 0 0 #2558c1 inset;
 }
 
@@ -343,9 +355,6 @@ a:focus {
 
 .tab-selector a {
   -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
   transition: none;
 }
 
@@ -364,12 +373,13 @@ a:focus {
 }
 
 .team-section {
-  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -386,11 +396,14 @@ a:focus {
 
 .team-small-box {
   position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   margin: 0 2% 0 0;
   font-size: 14px;
   border-radius: 16px;
   padding: 0 15px 75px;
+  -webkit-box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
   box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
 }
 
@@ -629,19 +642,18 @@ a:focus {
   a:hover {
     outline: none;
     -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    -ms-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
     text-decoration: none;
   }
   .small-box:hover figure {
+    -webkit-transform: translateY(5px);
     transform: translateY(5px);
   }
   .tabs-section .nav-pills>li.active>a:hover {
     background: none;
     position: relative;
     color: #2558c1;
+    -webkit-box-shadow: 0px -2px 0 0 #2558c1 inset;
     box-shadow: 0px -2px 0 0 #2558c1 inset;
   }
   .tabs-section .nav>li>a:hover {
@@ -650,6 +662,7 @@ a:focus {
     outline: none;
   }
   .btn-default:active:hover {
+    -webkit-box-shadow: 0 0 0 2px #2a4d8c inset;
     box-shadow: 0 0 0 2px #2a4d8c inset;
   }
 }

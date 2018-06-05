@@ -72,9 +72,11 @@
     text-align: justify;
     text-align-last: center;
     text-align: -webkit-center;
+    text-align: -moz-center;
   }
   .text-box h2 {
     text-align: -webkit-center;
+    text-align: -moz-center;
   }
   .text-box .btn1 {
     float: none;
@@ -159,6 +161,13 @@
   .modal.fade.in {
     width: 80%;
   }
+  .text-box h2 {
+    line-height: 38px;
+    font-size: 26px;
+    text-align: center;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -216,6 +225,7 @@
     width: 100%
   }
   .tabs_listing {
+    -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
   .tabs_listing {
@@ -298,6 +308,11 @@
     font-size: 26px;
     text-align: center;
     text-align: -webkit-center;
+    text-align: -moz-center;
+  }
+  .banner-heading,
+  h1 {
+    font-size: 30px;
   }
   .logo-mobile-modal {
     padding: 0 22% !important;
@@ -376,6 +391,7 @@
   -webkit-box-shadow: 0 2px 2px #eef4fb;
   box-shadow: 0 2px 2px #eef4fb;
   z-index: 9000;
+  -webkit-transition: all ease-in-out 0.8s;
   transition: all ease-in-out 0.8s;
 }
 

@@ -50,22 +50,22 @@
 }
 
 .copyright {
-    font-size: 12px;
-    padding-top: 15px;
-    text-align: left;
+  font-size: 12px;
+  padding-top: 15px;
+  text-align: left;
 }
 
 .legal-links {
-    text-align: left;
-    margin-top: -5px;
+  text-align: left;
+  margin-top: -5px;
 }
 
-.legal-links a{
-    font-size: 12px;
-    color: #888a8a;
+.legal-links a {
+  font-size: 12px;
+  color: #888a8a;
 }
 
-.legal-links a:hover{
+.legal-links a:hover {
   color: #0059c2;
 }
 
@@ -76,31 +76,27 @@
 }
 
 @media screen and (max-width: 991px) {
-  .legal-links, .copyright {
+  .legal-links,
+  .copyright {
     text-align: center;
   }
-
   .footer-logo {
     float: none !important;
     display: inline-block;
     margin: 0 auto 20px;
   }
-
   .footer-box span {
     float: none !important;
     display: inline-block;
   }
-
   .footer-box ul {
     width: 100%;
   }
-
   .footer-box ul li {
     width: 100%;
     padding: 20px 0px 10px;
     border-bottom: 1px solid #d8dee4;
   }
-
   .footer-box {
     padding: 40px 2%;
   }

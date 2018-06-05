@@ -143,6 +143,7 @@
     border: none;
   }
   .main-nav .navbar-nav>li.login>a {
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .container-fluid>.navbar-collapse,
@@ -190,6 +191,7 @@
   .navbar-default .navbar-nav>li.active>a,
   .navbar-default .navbar-nav>li.active>a:hover {
     background: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     color: #28c2ec !important;
   }
@@ -220,6 +222,7 @@
     height: 2000px;
     padding: 30px 10% 30px;
     border: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     background: #fff;
     /* left: -6px; */

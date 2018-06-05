@@ -8,7 +8,9 @@
   color: #2a4d8c;
   min-width: 236px;
   border-radius: 32px;
+  -webkit-box-shadow: 0 0 0 2px #2a4d8c inset;
   box-shadow: 0 0 0 2px #2a4d8c inset;
+  -webkit-transition: all ease-in-out 0.9s;
   transition: all ease-in-out 0.9s;
 }
 
@@ -29,6 +31,7 @@
   background: #074cc4;
   color: #fff;
   min-width: 236px;
+  -webkit-transition: all ease-in-out 0.9s;
   transition: all ease-in-out 0.9s;
 }
 
@@ -40,6 +43,7 @@
 }
 
 .btn-default {
+  -webkit-transition: all ease-in-out 0.9s;
   transition: all ease-in-out 0.9s;
 }
 
@@ -57,5 +61,6 @@
 .btn-default:hover {
   color: #fff;
   background-color: #2a4d8c;
+  -webkit-transition: all ease-in-out 0.9s;
   transition: all ease-in-out 0.9s;
 }

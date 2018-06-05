@@ -93,7 +93,7 @@ class HomePage extends Component {
     var textSection = document.querySelector('.text-section');
     var tabSection = document.querySelector('.tabs-section');
     var footerNav = document.querySelector('.footer-nav');
-    var blueBtn = document.querySelectorAll('.blue-btn');
+    var blueBtn = Array.from(document.querySelectorAll('.blue-btn'));
     var transparentBtn = document.querySelector('.transparent-btn');
     var textBox = document.querySelector('.text-box');
     var tabContent = document.querySelector('.tab-content');
