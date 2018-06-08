@@ -157,7 +157,7 @@ class Header extends Component {
                   </div>
                 </li>
               </ul>
-              <a href="#" id="close-nav" className="menuClose"><button onClick={this.toggleMobileNav}><i className="fa fa-times-circle"></i></button></a>
+              <a id="close-nav" className="menuClose"><button onClick={this.toggleMobileNav}><i className="fa fa-times-circle"></i></button></a>
             </div>
 
           </div>

@@ -65,7 +65,7 @@ class HomePage extends Component {
     var backdrop = document.querySelector('.backdrop');
 
     // var join = document.getElementsByClassName('joinBtn')[0];
-    const { hash } = window.location;
+    // const { hash } = window.location;
     // if (hash === '#/thankyou') {
     window.setTimeout(function() {
       subscribe.classList.add('hide');

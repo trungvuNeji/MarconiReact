@@ -19,7 +19,7 @@ class Banner extends Component {
               <span className="text-uppercase bold-font"><Trans>CTA Prompt</Trans></span>
             </p>
             <div className="blue-btn btn1 joinBtn" data-toggle="modal" data-target="#myModal">
-              <a href="#" onClick={this.props.toggleJoinModal}><Trans>CTA 1</Trans></a> 
+              <a onClick={this.props.toggleJoinModal}><Trans>CTA 1</Trans></a> 
             </div> 
             <div className="transparent-btn btn2"><a className="click-btn" href="#samplecode" data-scroll-nav="2"><Trans>CTA 2</Trans></a> </div>       
           </div>

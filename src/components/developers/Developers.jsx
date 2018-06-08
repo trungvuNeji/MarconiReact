@@ -29,7 +29,7 @@ class Developers extends Component {
   
   render() {    
     return (
-      <section className="content-box" data-scroll-index="0"><a id="developers"></a>
+      <section className="content-box" data-scroll-index="0" id="developers">
         <section className="container">
           <div className="row">
             <div className="main-box text-center developers-box  padding-top padding-botom">
@@ -55,10 +55,9 @@ class Developers extends Component {
                   className="blue-btn btn1" 
                   data-toggle="modal" 
                   data-target="#myModal"
-                  onClick={this.props.toggleJoinModal}><a href="#"><Trans>M3 CTA 1</Trans></a> </div>
+                  onClick={this.props.toggleJoinModal}><a><Trans>M3 CTA 1</Trans></a> </div>
               </div>
-
-              <div className="tabs-section col-xs-12 no-padding padding-top" data-scroll-index="2"><a id="samplecode"></a>
+              <div className="tabs-section col-xs-12 no-padding padding-top" data-scroll-index="2" id="samplecode">
                 <h3><span className="blue-text"><Trans>M3 Header 3-1</Trans></span> <Trans>M3 Header 3-2</Trans></h3>
                 
                 <div className="tabbable">

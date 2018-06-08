@@ -23,7 +23,7 @@ class CoreTech extends Component {
     const whitePaperLink = i18n.t('White Paper Link');
 
     return (
-      <section className="content-box js-sticky" data-scroll-index="1"><a id="technology"></a>
+      <section className="content-box js-sticky" data-scroll-index="1" id="technology">
         <section className="container">
           <div className="row">
             <div className="main-box text-center technology-box  padding-top padding-botom">
