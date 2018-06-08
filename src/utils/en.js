@@ -78,6 +78,8 @@ export const en = {
     'Glenn Description': 'Co-Founded PDI (studio that produced the <1>Shrek</1> and <3>Madagascar</3> series) and VanEdge Capital. CEO of DreamWorks Interactive. Advisor for corporations including Zynga & Citigroup.',
     'Stefan Title': 'Finance',
     'Stefan Description': 'Senior VP at Plenty ($226M raised – Softbank), ProsperWorks  ($86M raised – DHVC) and Harvest Power ($224M raised – Kleiner Perkins). Econ at UCBerkeley, MBA from Wharton',
+    'Tom Title': 'CSO of BitGo',
+    'Tom Description': 'Security expert and Chief Security Officer at Bitgo - Leading blockchain security platform and a pioneer of multi-sig technology. Previously, CSO at Neustar and DocuSign. MPA from Harvard.',
     'Join Modal Title': 'Get early access to the Marconi SDK and the latest product updates',
     'Join Modal Name': 'Full name*',
     'Join Modal Organization': 'Organization',

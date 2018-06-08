@@ -78,6 +78,8 @@ export const cn = {
     'Glenn Description': '联合创办了 PDI（此工作室制作发行过 <1>Shrek</1> 和 <3>Madagascar</3> 等动画系列）和 VanEdge Capital。DreamWorks Interactive 首席执行官。在 Zynga 和 Citigroup 等公司担任顾问。',
     'Stefan Title': '财务',
     'Stefan Description': 'Plenty（筹集了 2.26 亿美元 – Softbank）、ProsperWorks（筹集了 8600 万美元 – DHVC）和 Harvest Power（筹集了 2.24 亿美元 – Kleiner Perkins）高级副总裁。曾就读于伯克利大学经济学专业，并获得了沃顿商学院工商管理硕士学位',
+    'Tom Title': 'BitGo 首席安全官',
+    'Tom Description': 'Bitgo的安全专家兼首席安全官 - 领先的区块链安全平台和多重签名技术的先锋。曾在Neustar和DocuSign担任首席安全官。 曾就读于哈佛大学并获得公共管理硕士学位。',
     'Join Modal Title': '提前获得Marconi SDK 和产品更新',
     'Join Modal Name': '名字*',
     'Join Modal Organization': '组织',
