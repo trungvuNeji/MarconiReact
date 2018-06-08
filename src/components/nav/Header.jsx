@@ -16,6 +16,7 @@ class DropDownModal extends Component {
         <div id="myDropdown-mobile" className="dropdown-content show">
           <button className="en-btn-mobile" onClick={() => this.props.changeLanguage('en')}>EN</button>
           <button className="cn-btn-mobile" onClick={() => this.props.changeLanguage('cn')}>中文</button>
+          <button className="cn-btn-mobile" onClick={() => this.props.changeLanguage('ja')}>日本語</button>
         </div>
       );
     }
@@ -24,6 +25,7 @@ class DropDownModal extends Component {
         <div id="myDropdown" className="dropdown-content show">
           <button className="en-btn" onClick={() => this.props.changeLanguage('en')}>English</button>
           <button className="cn-btn" onClick={() => this.props.changeLanguage('cn')}>中文</button>
+          <button className="cn-btn" onClick={() => this.props.changeLanguage('ja')}>日本語</button>
         </div>
       );
     }
@@ -40,8 +42,12 @@ class Language extends Component {
       } else {
         return ('EN ');
       }
-    } else {
+    } 
+    else if (lang === 'cn') {
       return ('中文 ');
+    } 
+    else {
+      return('日本語 ');
     }
   }
 }

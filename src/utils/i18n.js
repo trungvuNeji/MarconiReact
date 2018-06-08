@@ -5,12 +5,14 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import { en } from './en';
 import { cn } from './cn';
+import { ja } from './ja';
 
 i18n.use(LanguageDetector).init({
   // we init with resources
   resources: {
     en: en,
-    cn: cn
+    cn: cn,
+    ja: ja
   },
   fallbackLng: 'en',
   debug: true,

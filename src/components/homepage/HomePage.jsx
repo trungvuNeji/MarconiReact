@@ -18,15 +18,7 @@ class HomePage extends Component {
 
   componentDidMount() {
     document.title = "Marconi - Smart Ethernet Protocol";
-
-    // Switch title of the page upon changing language
-    var language = i18n.language;
-    if (language === 'cn') {
-      document.title = "Marconi - 智能以太网协议";
-    }
-
-    // Scroll to top
-    window.scrollTo(0,0);
+    this.updateTitleContent();
 
     // Navigate to correct section if coming from other pages
     const { hash } = window.location;
@@ -42,7 +34,30 @@ class HomePage extends Component {
         // offset for the height of the navbar
       }, 0);
     }
+    
+    if (hash === '#/thankyou') {
+      this.showThanksModal();
+    }
+    this.checkLanguage();
 
+    // Scroll to top
+    window.scrollTo(0,0);
+  }
+
+  updateTitleContent() {
+    // Switch title of the page upon changing language
+    var language = i18n.language;
+    if (language === 'cn') {
+      document.title = "Marconi - 智能以太网协议";
+      document.getElementsByTagName("META")[2].content = "新的区块链协议，使用可编程的数据包提高安全性、私密性和网络中立性";
+    }
+    else if ( language === 'ja') {
+      document.title = "Marconi - スマートイーサネットプロトコル";
+      document.getElementsByTagName("META")[2].content = "プログラム可能なパケットを利用し、セキュリティ、プライバシー、ネットの中立性を強化する新しいブロックチェーンプロトコル";
+    }
+  }
+
+  showThanksModal() {
     // For the thank you modal
     var subscribe = document.querySelector('.subscribe-modal');
     var thanks = document.querySelector('.thanks-modal');
@@ -50,27 +65,25 @@ class HomePage extends Component {
     var backdrop = document.querySelector('.backdrop');
 
     // var join = document.getElementsByClassName('joinBtn')[0];
+    const { hash } = window.location;
+    // if (hash === '#/thankyou') {
+    window.setTimeout(function() {
+      subscribe.classList.add('hide');
+      thanks.classList.add('reveal');
+      close.click();
+      backdrop.classList.add('modal-backdrop', 'fade', 'in');
 
-    if (hash === '#/thankyou') {
-      window.setTimeout(function() {
-        subscribe.classList.add('hide');
-        thanks.classList.add('reveal');
+      setTimeout(function() {
         close.click();
-        backdrop.classList.add('modal-backdrop', 'fade', 'in');
+        backdrop.classList.remove('modal-backdrop', 'fade', 'in');
+      }, 2000);
 
-        setTimeout(function() {
-          close.click();
-          backdrop.classList.remove('modal-backdrop', 'fade', 'in');
-        }, 2000);
-
-        setTimeout(function() {
-          thanks.classList.remove('reveal');
-          subscribe.classList.remove('hide');
-        }, 3000);
-      }, 1000);
-    }
-
-    this.checkLanguage();
+      setTimeout(function() {
+        thanks.classList.remove('reveal');
+        subscribe.classList.remove('hide');
+      }, 3000);
+    }, 1000);
+    // }
   }
 
   toggleJoinModal() {
@@ -119,7 +132,7 @@ class HomePage extends Component {
       });
       // blueBtn.classList.add('blue-btn-cn');
     } 
-    else if (lng === 'en') {
+    else if (lng === 'en' || 'ja') {
       bannerHeading.classList.remove('banner-heading-cn');
       navbarNav.classList.remove('navbar-nav-cn');
       bannerText.classList.remove('banner-text-cn');
@@ -140,6 +153,7 @@ class HomePage extends Component {
   }
 
   render() {
+    
     return (
       <div>
         <Splash  

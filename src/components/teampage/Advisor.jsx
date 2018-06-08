@@ -64,12 +64,12 @@ class Advisor extends Component {
         <div className="spacer2 col-xs-12"></div>
         
         <div className="team-section col-xs-12 no-padding">
-          <div class="team-small-box">
+          <div className="team-small-box">
             <figure>
-              <img src={TomImg} class="profile-pic" alt="" />
+              <img src={TomImg} className="profile-pic" alt="" />
             </figure>
             <h3>Tom Pageler
-              <span class="blue-text"><Trans>Tom Title</Trans></span></h3>
+              <span className="blue-text"><Trans>Tom Title</Trans></span></h3>
             <Trans>Tom Description</Trans>
             <a href="https://www.linkedin.com/in/tom-pageler-5ab3251/"> <i className="fab fa-linkedin-in"></i></a>
           </div>

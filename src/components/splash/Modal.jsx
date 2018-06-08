@@ -67,6 +67,7 @@ class Modal extends Component {
     const joinName = i18n.t('Join Modal Name');
     const joinOrg = i18n.t('Join Modal Organization');
     const joinDesc = i18n.t('Join Modal Description');
+    const subConfirm = i18n.t('GDPR Text');
     
     return (
       <div className="modal fade" id="myModal" role="dialog">
@@ -189,10 +190,11 @@ class Modal extends Component {
                     <label htmlFor="mce-MMERGE15">Subscriber's Confirmation </label>
                     <input 
                       type="text" 
-                      value="" 
+                      value={subConfirm} 
                       name="MMERGE15" 
                       className="" 
-                      id="mce-MMERGE15"/>
+                      id="mce-MMERGE15"
+                      readOnly/>
                   </div>
 
                   <div className="mc-field-group gdpr-screen">
