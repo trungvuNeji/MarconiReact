@@ -138,7 +138,7 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav pull-right regular-font ">
                 <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
-                <li><a href={whitePaperLink}><Trans>Navigation 1</Trans></a></li>
+                <li><a className="bold-font" href={whitePaperLink}><Trans>Navigation 1</Trans></a></li>
                 <li>
                   <a className="click-btn nav-btn" href="#developers" onClick={this.toggleMobileNav}><Trans>Navigation 2</Trans></a>
                 </li>

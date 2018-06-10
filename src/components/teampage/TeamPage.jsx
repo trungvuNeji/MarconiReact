@@ -38,7 +38,7 @@ class TeamPage extends Component {
       navbarNav.classList.add('navbar-nav-cn');
       footerNav.classList.add('footer-nav-cn');
     } 
-    else if (lng === 'en') {
+    else if (lng === 'en' || 'ja') {
       navbarNav.classList.remove('navbar-nav-cn');
       footerNav.classList.remove('footer-nav-cn');
     }

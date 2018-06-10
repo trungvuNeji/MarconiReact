@@ -102,7 +102,7 @@ class HomePage extends Component {
     var bannerHeading = document.querySelector('.banner-heading');
     var navbarNav = document.querySelector('.navbar-nav');
     var bannerText = document.querySelector('.banner-text');
-    var textSection = document.querySelector('.text-section');
+    var textSection = Array.from(document.querySelectorAll('.text-section'));
     var tabSection = document.querySelector('.tabs-section');
     var footerNav = document.querySelector('.footer-nav');
     var blueBtn = Array.from(document.querySelectorAll('.blue-btn'));
@@ -117,7 +117,6 @@ class HomePage extends Component {
       bannerHeading.classList.add('banner-heading-cn');
       navbarNav.classList.add('navbar-nav-cn');
       bannerText.classList.add('banner-text-cn');
-      textSection.classList.add('text-section-cn');
       tabSection.classList.add('text-section-cn');
       footerNav.classList.add('footer-nav-cn');
       transparentBtn.classList.add('transparent-btn-cn');
@@ -126,6 +125,9 @@ class HomePage extends Component {
       textSize.classList.add('text-size-cn');
       bottomTextBox.classList.add('bottom-text-box-cn');
       gdprCN.classList.add('gdpr-cn');
+      textSection.forEach(section => {
+        section.classList.add('text-section-cn');
+      });
       blueBtn.forEach(btn => {
         btn.classList.add('blue-btn-cn');
       });
@@ -135,7 +137,6 @@ class HomePage extends Component {
       bannerHeading.classList.remove('banner-heading-cn');
       navbarNav.classList.remove('navbar-nav-cn');
       bannerText.classList.remove('banner-text-cn');
-      textSection.classList.remove('text-section-cn');
       tabSection.classList.remove('text-section-cn');
       footerNav.classList.remove('footer-nav-cn');
       // blueBtn.classList.remove('blue-btn-cn');
@@ -145,6 +146,9 @@ class HomePage extends Component {
       textSize.classList.remove('text-size-cn');
       bottomTextBox.classList.remove('bottom-text-box-cn');
       gdprCN.classList.remove('gdpr-cn');
+      textSection.forEach(section => {
+        section.classList.remove('text-section-cn');
+      });
       blueBtn.forEach(btn => {
         btn.classList.remove('blue-btn-cn');
       });
