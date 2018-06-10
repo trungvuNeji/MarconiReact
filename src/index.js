@@ -9,7 +9,8 @@ import configureStore from './utils/store';
 import Root from './components/root.jsx';
 
 import "babel-polyfill";
-import "core-js";
+import 'core-js/es6/map';
+import 'core-js/es6/set';
 
 import registerServiceWorker from './registerServiceWorker';
 
