@@ -6,8 +6,10 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "core-js": "^2.5.7",
     "i18next": "^11.3.2",
     "i18next-browser-languagedetector": "^2.2.0",
     "lodash": "^4.17.10",

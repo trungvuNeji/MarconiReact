@@ -177,11 +177,10 @@ a:focus {
 /********* case-box **************/
 
 .case-box {
-  display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -199,6 +198,7 @@ a:focus {
   -ms-flex: 1;
   flex: 1;
   float: left;
+  width: 100%;
   margin-right: 3%;
   background: #fff;
   border-radius: 10px;

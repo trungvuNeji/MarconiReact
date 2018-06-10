@@ -8,6 +8,9 @@ import i18n from './utils/i18n';
 import configureStore from './utils/store';
 import Root from './components/root.jsx';
 
+import "babel-polyfill";
+import "core-js";
+
 import registerServiceWorker from './registerServiceWorker';
 
 document.addEventListener("DOMContentLoaded", () => {
