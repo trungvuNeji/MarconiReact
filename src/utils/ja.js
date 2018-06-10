@@ -78,16 +78,16 @@ export const ja = {
     'Glenn Description': 'PDI（<1>Shrek</1>シリーズと<3>Madagascar</3>シリーズのプロデューサー）とVanEdge Capitalを共同設立。DreamWorks InteractiveのCEO。Snapchat、Zynga、Citigroupを含む企業のアドバイザー。',
     'Stefan Title': 'ファイナンス',
     'Stefan Description': 'PlentyのシニアVP（ソフトバンクから2億2,600万ドル調達）、ProsperWorks（DHVCから8,600万ドル調達）、Harvest Power（Kleiner Perkinsから2億2,400万ドル調達）。カリフォルニア大学バークレー校卒（経済）、ペンシルベニア大学ウォートン・スクール卒（経営学修士）',
-    'Tom Title': 'BitGo 首席安全官',
-    'Tom Description': 'Security expert and Chief Security Officer at Bitgo - Leading blockchain security platform and a pioneer of multi-sig technology. Previously, CSO at Neustar and DocuSign. MPA from Harvard.',
+    'Tom Title': 'BitGoのCSO',
+    'Tom Description': 'Bitgoのセキュリティー専門家とセキュリティ最高責任者-ブロックチェーンセキュリティプラットフォームの先導、 マルチシグマ技術のパイオニア。 NeustarとDocuSignの元CSO。 ハーバード大学のMPA。',
     'Join Modal Title': 'Marconi SDKと最新の製品アップデートへのアーリーアクセスを利用する',
     'Join Modal Name': '氏名*',
     'Join Modal Organization': '組織',
     'Join Modal Description': 'ご興味を持たれた理由をお聞かせください。',
     'Thanks Modal title': 'ありがとうございました。',
     'Thanks Modal welcome': 'Marconiコミュニティへようこそ',
-    'GDPR Confirm': '我想接收产品信息的电子邮件',
-    'GDPR Text': '我了解 Marconi 基金会将存储我的信息以发送这些产品信息。我已阅读<1>隐私政策</1>，并可通过电子邮件选择 “取消订阅” 来退出接收新的产品信息。选择退出后，个人信息将不会被收集，任何以前收集的个人信息将被删除。',
+    'GDPR Confirm': 'メールで製品のアップデートを受け取りたいです。',
+    'GDPR Text': 'マルコーニ財団が更新情報を送信するために個人情報を保存することを理解します。プライバシーポリシーを読解しました。電子メールメッセージを通じて「購読中止」オプションを選択することにより、製品や製品のアップデートを受信しないようにすることができます。 解除すると、個人情報は収集されず、以前に収集された個人情報は削除されます。',
     'White Paper Link': 'https://docsend.com/view/yezepjj'
   }
 };

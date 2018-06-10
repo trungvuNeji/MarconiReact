@@ -64,7 +64,7 @@ class Advisor extends Component {
         <div className="spacer2 col-xs-12"></div>
         
         <div className="team-section col-xs-12 no-padding">
-          <div className="team-small-box">
+          <div className="team-small-box tom">
             <figure>
               <img src={TomImg} className="profile-pic" alt="" />
             </figure>
@@ -85,7 +85,6 @@ class Advisor extends Component {
           <div className="empty-div"></div>
           <div className="empty-div"></div>
         </div>
-
       </div>
     );
   }

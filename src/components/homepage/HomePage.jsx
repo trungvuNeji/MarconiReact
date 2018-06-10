@@ -38,7 +38,6 @@ class HomePage extends Component {
     if (hash === '#/thankyou') {
       this.showThanksModal();
     }
-    this.checkLanguage();
 
     // Scroll to top
     window.scrollTo(0,0);
