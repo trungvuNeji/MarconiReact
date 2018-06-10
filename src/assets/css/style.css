@@ -181,6 +181,7 @@ a:focus {
   display: -moz-flex;
   display: -ms-flexbox;
   display: -webkit-flex;
+  display: -webkit-inline-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -204,6 +205,48 @@ a:focus {
   -webkit-box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
   box-shadow: 0 0 21px 1px rgba(66, 65, 65, .17);
 }
+
+/* For IE9 Fallback */
+
+.no-flexbox .case-box {
+  display: table;
+}
+
+.no-flexbox .case-box>.small-box {
+  padding: 36px 20px;
+  line-height: 26px;
+  display: inline-block;
+  width: 30%;
+  min-height: 360px;
+}
+
+.no-flexbox .case-box>.small-box>p {
+  font-size: 15px;
+}
+
+.no-flexbox .team-section {
+  display: table;
+}
+
+.no-flexbox .team-small-box {
+  display: inline-block;
+  width: 23%;
+  min-height: 450px;
+  vertical-align: top;
+  float: left;
+}
+
+@media screen and (max-width: 1199px) {
+  .no-flexbox .team-small-box {
+    width: 23%;
+    min-height: 550px;
+  }
+  .no-flexbox .team-small-box p {
+    font-size: 13px;
+  }
+}
+
+/* ============= */
 
 .small-box:last-child {
   margin-right: 0;
