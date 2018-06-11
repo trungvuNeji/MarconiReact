@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://trungvuneji.github.io/MarconiReact",
   "dependencies": {
+    "airbnb-js-shims": "^1.6.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
