@@ -36,19 +36,19 @@ class Language extends Component {
   render() {
     const { lang, width } = this.props;
 
-    if (lang === 'en') {
+    if (lang === 'cn') {
+      return ('中文 ');
+    } 
+    else if (lang === 'ja'){
+      return('日本語 ');
+    }
+    else {
       if (width > 767) {
         return ('English ');
       } else {
         return ('EN ');
       }
     } 
-    else if (lang === 'cn') {
-      return ('中文 ');
-    } 
-    else {
-      return('日本語 ');
-    }
   }
 }
 
@@ -57,7 +57,7 @@ class Header extends Component {
     super(props);
     this.state = {
       check: false,
-      languageModal: true,
+      languageModal: false,
     };
 
     this.width = window.innerWidth;
@@ -71,10 +71,6 @@ class Header extends Component {
 
   navigateHome() {
     this.props.history.push('/');
-  }
-
-  componentDidMount() {
-    // this.checkLanguage();
   }
 
   changeLanguage(lng) {
@@ -94,7 +90,7 @@ class Header extends Component {
   // Close the modal when clicking outsite of it
   handleClickOutside() {
     // Closing modal
-    if (!this.state.languageModal) {
+    if (this.state.languageModal) {
       this.toggleLanguageModal();
     }
   }
@@ -130,7 +126,7 @@ class Header extends Component {
                   <Language width={this.width} lang={language} /> 
                   <i className="fa fa-caret-down dropbtn"></i>
                 </button>
-                {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
+                {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
               </div>
               <Link to='/' className="navbar-brand"><img src={logo} alt=""/></Link>
             </div>
@@ -153,7 +149,7 @@ class Header extends Component {
                       <Language width={this.width} lang={language} /> 
                       <i className="fa fa-caret-down dropbtn"></i>
                     </button>
-                    {!this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
+                    {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                   </div>
                 </li>
               </ul>
