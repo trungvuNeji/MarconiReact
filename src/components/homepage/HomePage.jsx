@@ -30,7 +30,9 @@ class HomePage extends Component {
         const id = hash.replace('#/', '');
         const element = document.getElementById(id);
         if (element) element.scrollIntoView();
-        window.scrollBy(0, -120);
+        // var x = -100;
+        // if (window.innerWidth <= 767) return x = -130;
+        window.scrollBy(0, -130);
         // offset for the height of the navbar
       }, 0);
     }

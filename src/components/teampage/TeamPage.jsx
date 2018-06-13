@@ -24,8 +24,8 @@ class TeamPage extends Component {
 
     window.scrollTo(0,0);
     
-    var navBar = document.querySelector('.header-box');
-    navBar.classList.add('sticky');
+    // var navBar = document.querySelector('.header-box');
+    // navBar.classList.add('sticky');
   }
 
   checkLanguage() {

@@ -3,10 +3,11 @@
 // ==== Backward compatible
 // import 'babel-polyfill';
 // import 'core-js';
-import 'core-js/es5';
-import 'core-js/es6/object';
-import 'core-js/es6/reflect';
-
+// import 'core-js/es5';
+// import 'core-js/es6/object';
+// import 'core-js/es6/reflect';
+// import 'web-animations-js';
+// import 'classlist.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -22,11 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   let store = configureStore();
 
-  ReactDOM.render( 
+  ReactDOM.render(
     <I18nextProvider i18n={i18n}>
       <Root store={store} /> 
-    </I18nextProvider>
-    , root);
+    </I18nextProvider>, root);
   registerServiceWorker();
 });
 
