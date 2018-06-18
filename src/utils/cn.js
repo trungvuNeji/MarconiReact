@@ -9,7 +9,7 @@ export const cn = {
     'Hero Description': '新的区块链协议，使用可编程的数据包提高安全性、私密性和网络中立性',
     'CTA Prompt': '抢先试用此 SDK',
     'CTA 1': '加入社区',
-    'CTA 2': '查看示例代码',
+    'CTA 2': '读白皮书',
     'M1 Title': '核心技术',
     'M1 Description': 'Marconi 协议采用向下延伸覆盖至以太网的设计，并且支持去中心化网络堆栈，从而提高私密性、安全性、网络中立性和升级能力。',
     'M1 Sub1 Title': '以太网级加密',

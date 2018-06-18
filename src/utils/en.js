@@ -9,7 +9,7 @@ export const en = {
     'Hero Description': 'A new blockchain protocol using programmable packets to enhance security, privacy and net neutrality',
     'CTA Prompt': 'Get early access to the SDK',
     'CTA 1': 'Join Community',
-    'CTA 2': 'View Sample Code',
+    'CTA 2': 'Read White Paper',
     'M1 Title': 'Core Technology',
     'M1 Description': 'The Marconi Protocol is designed down to the ethernet level and powers a <1 /> decentralized networking stack that enhances privacy, security, net neutrality and <3 /> upgradability.',
     'M1 Sub1 Title': 'Ethernet-Level Encryption',
