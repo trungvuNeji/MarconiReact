@@ -134,7 +134,7 @@ class Header extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav pull-right regular-font ">
                 <Link className="navbar-brand logo-mobile-modal" to="/"><img src={logo} alt=""/></Link>
-                <li><a className="bold-font" href={whitePaperLink}><Trans>Navigation 1</Trans></a></li>
+                <li><div className="small-transparent-btn bold-font"><a href={whitePaperLink}><Trans>Navigation 1</Trans></a></div></li>
                 <li>
                   <a className="click-btn nav-btn" href="#developers" onClick={this.toggleMobileNav}><Trans>Navigation 2</Trans></a>
                 </li>
@@ -147,7 +147,6 @@ class Header extends Component {
                   <div id="lang-dropdown">
                     <button onClick={this.toggleLanguageModal} className="dropbtn">
                       <Language width={this.width} lang={language} /> 
-                      <i className="fa fa-caret-down dropbtn"></i>
                     </button>
                     {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                   </div>

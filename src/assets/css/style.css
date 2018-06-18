@@ -4,10 +4,7 @@ body {
   background: repeat-x top #fff;
 }
 
-body,
-select,
-input,
-div {
+body, select, input, div {
   color: #888a8a;
   font-size: 16px;
   line-height: 26px;
@@ -46,6 +43,7 @@ a {
   text-decoration: none;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
+  cursor: pointer;
 }
 
 a:focus {
@@ -53,9 +51,9 @@ a:focus {
   outline-offset: 0px;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: none !important;
+  cursor: pointer;
 }
 
 /***********************/
@@ -71,8 +69,7 @@ a:focus {
   color: #1f191a;
 }
 
-.banner-image,
-.banner-text {
+.banner-image, .banner-text {
   display: inline-block;
   vertical-align: middle;
   float: none !important;
@@ -89,8 +86,7 @@ a:focus {
   margin: 65px 0 0;
 }
 
-.banner-text .btn1,
-.banner-text .btn2 {
+.banner-text .btn1, .banner-text .btn2 {
   float: left;
 }
 
@@ -102,8 +98,7 @@ a:focus {
   margin-left: 22px;
 }
 
-.content-box,
-.main-box {
+.content-box, .main-box {
   float: left;
   width: 100%;
 }
@@ -297,8 +292,7 @@ a:focus {
   font-size: 13px;
 }
 
-.text-section .btn1,
-.text-section .btn2 {
+.text-section .btn1, .text-section .btn2 {
   float: left;
 }
 
@@ -357,8 +351,7 @@ a:focus {
   border-radius: 0 32px 32px 0;
 }
 
-.tabs-section .nav-pills>li.active>a,
-.tabs-section .nav-pills>li.active>a:focus {
+.tabs-section .nav-pills>li.active>a, .tabs-section .nav-pills>li.active>a:focus {
   background: none;
   position: relative;
   color: #2558c1;
@@ -482,6 +475,10 @@ a:focus {
   margin-bottom: 130px;
 }
 
+.investor-box .separator {
+  margin-bottom: 60px;
+}
+
 #close-nav {
   font-size: 20px;
   height: 18px;
@@ -599,9 +596,7 @@ a:focus {
   padding-bottom: 50px;
 }
 
-.tab_01,
-.tab_02,
-.tab_03 {
+.tab_01, .tab_02, .tab_03 {
   padding-top: 50px
 }
 

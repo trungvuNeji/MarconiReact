@@ -88,6 +88,7 @@ export const ja = {
     'Thanks Modal welcome': 'Marconiコミュニティへようこそ',
     'GDPR Confirm': 'メールで製品のアップデートを受け取りたいです。',
     'GDPR Text': 'マルコーニ財団が更新情報を送信するために個人情報を保存することを理解します。プライバシーポリシーを読解しました。電子メールメッセージを通じて「購読中止」オプションを選択することにより、製品や製品のアップデートを受信しないようにすることができます。 解除すると、個人情報は収集されず、以前に収集された個人情報は削除されます。',
-    'White Paper Link': 'https://docsend.com/view/yezepjj'
+    'White Paper Link': 'https://docsend.com/view/5zragmb',
+    'Investors Title': '投資家'
   }
 };

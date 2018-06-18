@@ -65,3 +65,27 @@
   -webkit-transition: all ease-in-out 0.9s;
   transition: all ease-in-out 0.9s;
 }
+
+.small-transparent-btn a {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  padding: 4px 20px 2px 20px;
+  color: #074cc4;
+  margin-top: -4px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 0 1px #074cc4 inset;
+  box-shadow: 0 0 0 1px #074cc4 inset;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+.small-transparent-btn a:hover {
+  color: #222;
+  background: none;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 0 0 1px #222 inset;
+  transition: all ease-in-out 0.6s;
+}

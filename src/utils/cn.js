@@ -88,6 +88,7 @@ export const cn = {
     'Thanks Modal welcome': '欢迎来到 Marconi 社团',
     'GDPR Confirm': '我想接收产品信息的电子邮件',
     'GDPR Text': '我了解 Marconi 基金会将存储我的信息以发送这些产品信息。我已阅读<1>隐私政策</1>，并可通过电子邮件选择 “取消订阅” 来退出接收新的产品信息。选择退出后，个人信息将不会被收集，任何以前收集的个人信息将被删除。',
-    'White Paper Link': 'https://docsend.com/view/yezepjj'
+    'White Paper Link': 'https://docsend.com/view/yezepjj',
+    'Investors Title': '投资者'
   }
 };

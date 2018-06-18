@@ -88,6 +88,7 @@ export const en = {
     'Thanks Modal welcome': 'Welcome to the Marconi community',
     'GDPR Confirm': 'I want to receive product updates over email.',
     'GDPR Text': 'I understand the Marconi Foundation will store my information to send these updates. I have read the <1>Privacy Policy</1> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.',
-    'White Paper Link': 'https://docsend.com/view/5zragmb'
+    'White Paper Link': 'https://docsend.com/view/5zragmb',
+    'Investors Title': 'Investors'
   }
 };

@@ -6,6 +6,7 @@ import i18n from '../../utils/i18n';
 import Header from '../nav/Header';
 import CoreTeam from './CoreTeam';
 import Advisor from './Advisor';
+import Investor from './Investor';
 
 class TeamPage extends Component {
   constructor(props) {
@@ -24,8 +25,8 @@ class TeamPage extends Component {
 
     window.scrollTo(0,0);
     
-    // var navBar = document.querySelector('.header-box');
-    // navBar.classList.add('sticky');
+    var navBar = document.querySelector('.header-box');
+    navBar.classList.add('sticky');
   }
 
   checkLanguage() {
@@ -59,6 +60,7 @@ class TeamPage extends Component {
             <div className="row">
               <CoreTeam />
               <Advisor />
+              <Investor />
             </div>
           </section>
         </section>
