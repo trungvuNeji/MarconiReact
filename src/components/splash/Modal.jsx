@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
+
 import onClickOutside from 'react-onclickoutside';
 import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -15,14 +17,19 @@ class Modal extends Component {
       organization: '',
       interest: '',
       loc: 'hero-text',
-      check: false,
+      check: '',
       language: i18n.language,
-      toggle: false
+      toggle: false,
+      error: ''
     };
 
     this.toggleJoinModal = this.toggleJoinModal.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.checkInput = this.checkInput.bind(this);
+    this.customSubmitForm = this.customSubmitForm.bind(this);
+    this.showThanksModal = this.showThanksModal.bind(this);
+    this.clearForm = this.clearForm.bind(this);
+    this.toggleCheckBox = this.toggleCheckBox.bind(this);
   }
 
   toggleJoinModal() {
@@ -63,6 +70,77 @@ class Modal extends Component {
     }
   }
 
+  customSubmitForm(e) {
+    e.preventDefault();
+    var that = this;
+
+    const url = "https://marconi.us17.list-manage.com/subscribe/post-json?u=f4163dd7d40ad21ea56e32016&amp;id=90c1bb666d";
+    // const data = document.querySelector('form');
+    // var completedForm = e.target;
+    var $form = $('form');
+    
+    $.ajax({
+      type: 'GET',
+      url: url,
+      cache: false,
+      data: $form.serialize(),
+      dataType: 'jsonp',
+      jsonp: 'c', // trigger mailChimp to return a JSONP response
+      contentType: 'application/json; charset=utf-8',
+
+      error: function(error) {
+        alert("Could not connect to the registration server. Please try again later.");
+      },
+
+      success: function(data) {
+        if (data.result === "success") {
+          that.showThanksModal();
+        } else {
+          var message = i18n.t('GDPR Error Message');
+          that.setState({ error: message });
+        }
+      }
+    });
+  }
+
+  toggleCheckBox() {
+    var checked = this.state.check === '' ? 'checked' : '';
+    this.setState ({ check: checked });
+  }
+
+  showThanksModal() {
+    var $subscribe = $('.subscribe-modal');
+    var $thanks = $('.thanks-modal');
+    var $close = $('.close');
+
+    window.setTimeout(function() {
+      $subscribe.addClass('hide');
+      $thanks.addClass('reveal');
+
+      setTimeout(function() {
+        $close.click();
+      }, 2500);
+
+      setTimeout(function() {
+        $thanks.removeClass('reveal');
+        $subscribe.removeClass('hide');
+      }, 3000);
+    }, 1500);
+
+    this.clearForm();
+    this.setState({ error: '' });
+  }
+
+  clearForm() {
+    this.setState({
+      email: '',
+      fullName: '',
+      organization: '',
+      interest: '',
+      check: ''
+    });
+  }
+
   render() {
     const joinName = i18n.t('Join Modal Name');
     const joinOrg = i18n.t('Join Modal Organization');
@@ -75,12 +153,13 @@ class Modal extends Component {
 
           <div className="modal-content subscribe-modal">
             <form 
-              action="https://marconi.us17.list-manage.com/subscribe/post" 
-              method="POST" 
+              action="https://marconi.us17.list-manage.com/subscribe/post-json" 
+              method="GET" 
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
               onChange={this.checkInput}
+              onSubmit={this.customSubmitForm}
               noValidate>
               <input type="hidden" name="u" value="f4163dd7d40ad21ea56e32016"/>
               <input type="hidden" name="id" value="90c1bb666d"/>
@@ -100,7 +179,7 @@ class Modal extends Component {
 
               <div className="modal-body">
                 <div className="form-group">
-
+                  <div className="error-message">{this.state.error}</div>
                   <div className="input-group">
                     <div className="input-group-addon">
                       <i className="fa fa-envelope"></i>
@@ -176,6 +255,8 @@ class Modal extends Component {
                       value="True" 
                       name="MMERGE12" 
                       id="mce-MMERGE12-0"
+                      checked={this.state.check}
+                      onChange={this.toggleCheckBox}
                       required/>
                     <label htmlFor="mce-MMERGE12-0">
                       <span>&nbsp;</span><Trans>GDPR Confirm</Trans>
@@ -183,7 +264,7 @@ class Modal extends Component {
                   </div>
 
                   <div className="input-group gdpr-text">
-                    <p><Trans i18nKey='GDPR Text'>I understand the Marconi Foundation will store my information to send these updates. I have read the <Link to="/privacy">Privacy Policy</Link> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.</Trans></p>
+                    <p><Trans i18nKey='GDPR Text'>I understand the Marconi Foundation will store my information to send these updates. I have read the <Link to="/privacy" target="_blank">Privacy Policy</Link> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.</Trans></p>
                   </div>
 
                   <div className="mc-field-group sub-confirm">

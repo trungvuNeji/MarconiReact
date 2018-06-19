@@ -36,10 +36,6 @@ class HomePage extends Component {
         // offset for the height of the navbar
       }, 0);
     }
-    
-    if (hash === '#/thankyou') {
-      this.showThanksModal();
-    }
 
     // Scroll to top
     window.scrollTo(0,0);
@@ -58,34 +54,34 @@ class HomePage extends Component {
     }
   }
 
-  showThanksModal() {
-    // For the thank you modal
-    var subscribe = document.querySelector('.subscribe-modal');
-    var thanks = document.querySelector('.thanks-modal');
-    var close = document.querySelector('.close');
-    var backdrop = document.querySelector('.backdrop');
+  // showThanksModal() {
+  //   // For the thank you modal
+  //   var subscribe = document.querySelector('.subscribe-modal');
+  //   var thanks = document.querySelector('.thanks-modal');
+  //   var close = document.querySelector('.close');
+  //   var backdrop = document.querySelector('.backdrop');
 
-    // var join = document.getElementsByClassName('joinBtn')[0];
-    // const { hash } = window.location;
-    // if (hash === '#/thankyou') {
-    window.setTimeout(function() {
-      subscribe.classList.add('hide');
-      thanks.classList.add('reveal');
-      close.click();
-      backdrop.classList.add('modal-backdrop', 'fade', 'in');
+  //   // var join = document.getElementsByClassName('joinBtn')[0];
+  //   // const { hash } = window.location;
+  //   // if (hash === '#/thankyou') {
+  //   window.setTimeout(function() {
+  //     subscribe.classList.add('hide');
+  //     thanks.classList.add('reveal');
+  //     close.click();
+  //     backdrop.classList.add('modal-backdrop', 'fade', 'in');
 
-      setTimeout(function() {
-        close.click();
-        backdrop.classList.remove('modal-backdrop', 'fade', 'in');
-      }, 2000);
+  //     setTimeout(function() {
+  //       close.click();
+  //       backdrop.classList.remove('modal-backdrop', 'fade', 'in');
+  //     }, 2000);
 
-      setTimeout(function() {
-        thanks.classList.remove('reveal');
-        subscribe.classList.remove('hide');
-      }, 3000);
-    }, 1000);
-    // }
-  }
+  //     setTimeout(function() {
+  //       thanks.classList.remove('reveal');
+  //       subscribe.classList.remove('hide');
+  //     }, 3000);
+  //   }, 1000);
+  //   // }
+  // }
 
   toggleJoinModal() {
     var modal = document.querySelector('.modal');
