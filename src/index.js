@@ -1,13 +1,14 @@
 // this is out entry file, render it to the React DOM
 
 // ==== Backward compatible
-// import 'babel-polyfill';
-// import 'core-js';
+import 'babel-polyfill';
+import 'core-js';
+import 'es5-shim';
+import 'es6-shim';
 // import 'core-js/es5';
 // import 'core-js/es6/object';
 // import 'core-js/es6/reflect';
 // import 'web-animations-js';
-// import 'classlist.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

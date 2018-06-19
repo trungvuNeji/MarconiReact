@@ -285,6 +285,9 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+  .navbar-header .navbar-brand {
+    padding-top: 18px;
+  }
 }
 
 /* @media screen and (max-width: 700px) {

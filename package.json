@@ -12,6 +12,8 @@
     "babel-preset-react": "^6.24.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.7",
+    "es5-shim": "^4.5.10",
+    "es6-shim": "^0.35.3",
     "form-serialize": "^0.7.2",
     "i18next": "^11.3.2",
     "i18next-browser-languagedetector": "^2.2.0",

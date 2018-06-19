@@ -18,7 +18,7 @@ class Splash extends Component  {
     var navBar = document.querySelector('.header-box');
     const fromTop = window.scrollY;
 
-    if (fromTop >= 560) {
+    if (fromTop >= 545) {
       navBar.classList.add('sticky');
     } else {
       navBar.classList.remove('sticky');
