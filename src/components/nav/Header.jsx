@@ -147,6 +147,7 @@ class Header extends Component {
                   <div id="lang-dropdown">
                     <button onClick={this.toggleLanguageModal} className="dropbtn">
                       <Language width={this.width} lang={language} /> 
+                      <i className="fa fa-caret-down dropbtn"></i>
                     </button>
                     {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                   </div>
