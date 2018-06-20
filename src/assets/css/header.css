@@ -1,10 +1,11 @@
 .outer-box {
   position: relative;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 .header-box {
   padding-bottom: 30px;
+  padding-top: 5px;
 }
 
 .main-navigation {
