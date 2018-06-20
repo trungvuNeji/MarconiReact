@@ -169,7 +169,7 @@ class Modal extends Component {
                   type="button" 
                   className="close"
                   data-dismiss="modal"
-                  onClick={this.toggleJoinModal}><i className="fa fa-times-circle"></i>
+                  onClick={this.toggleJoinModal}><i className="far fa-times-circle"></i>
                 </button>
                 <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
