@@ -20,20 +20,29 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+  <!-- All below scripts are for older browsers compatibility -->
+
+  <!-- Html5Shiv for IE8 compatibility -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <link href="assets/css/ie8.css" type="text/css" rel="stylesheet">
+    <script src="./assets/js/ie8-script.js"</script>
+  <![endif]-->
+
+  <!-- Polyfill for backward compatibility -->
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+  <!-- Modernizr -->
+  <script src="%PUBLIC_URL%/modernizr-custom.js"></script>
+
+  <!-- RespondJS -->
+  <script src="%PUBLIC_URL%/respond.min.js"></script>
+
   <!-- JS script -->
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-shim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.2/es6-sham.min.js"></script> -->
-
   <script src="%PUBLIC_URL%/script.js"></script>
-
-  <!-- Modernizr -->
-  <!-- <script src="%PUBLIC_URL%/modernizr-custom.js"></script> -->
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.

@@ -1,0 +1,24 @@
+.transparent-btn, .blue-btn.btn2:hover {
+  border: 1px solid #2a4d8c;
+}
+
+.blue-btn.btn2 {
+  border: 1px solid #074cc4;
+}
+
+.tabs-section ul {
+  border: 1px solid #d8e1f4;
+}
+
+.team-small-box {
+  border: 1px solid #dedede;
+}
+
+.investor-img {
+  width: 340px;
+  height: 100px;
+}
+
+.overlay1, .overlay2, .img1, .img2 {
+  display: none;
+}
