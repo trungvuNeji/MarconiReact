@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 import $ from 'jquery';
 
 import onClickOutside from 'react-onclickoutside';
@@ -57,7 +58,7 @@ class Modal extends Component {
   checkInput() {
     var btnSubmit = document.querySelector('.btn-submit');
     var checkBox = document.querySelector('#mce-MMERGE12-0');
-    
+
     if (
       this.state.email.length > 0 &&
       this.state.email.includes('@') &&
@@ -103,9 +104,9 @@ class Modal extends Component {
     });
   }
 
-  toggleCheckBox() {
+  async toggleCheckBox() {
     var checked = this.state.check === '' ? 'checked' : '';
-    this.setState ({ check: checked });
+    await this.setState ({ check: checked });
   }
 
   showThanksModal() {
@@ -125,7 +126,7 @@ class Modal extends Component {
         $thanks.removeClass('reveal');
         $subscribe.removeClass('hide');
       }, 3000);
-    }, 1500);
+    }, 500);
 
     this.clearForm();
     this.setState({ error: '' });
@@ -158,7 +159,7 @@ class Modal extends Component {
               id="mc-embedded-subscribe-form" 
               name="mc-embedded-subscribe-form" 
               className="validate" 
-              onChange={this.checkInput}
+              // onChange={this.checkInput}
               onSubmit={this.customSubmitForm}
               noValidate>
               <input type="hidden" name="u" value="f4163dd7d40ad21ea56e32016"/>
@@ -266,6 +267,13 @@ class Modal extends Component {
                   <div className="input-group gdpr-text">
                     <p><Trans i18nKey='GDPR Text'>I understand the Marconi Foundation will store my information to send these updates. I have read the <Link to="/privacy" target="_blank">Privacy Policy</Link> and can opt out of receiving products or product updates by selecting an `unsubscribe` option through an e-mail message. Upon opting out, personal information will not be collected and any previously collected personal information will be deleted.</Trans></p>
                   </div>
+
+                  <ReCAPTCHA
+                    ref="recaptcha"
+                    className="g-recaptcha"
+                    sitekey="6LdnUmAUAAAAAKcRAmv5Joo_ND55Yl8WT­-xUKXVb"
+                    onChange={this.checkInput}
+                  />
 
                   <div className="mc-field-group sub-confirm">
                     <label htmlFor="mce-MMERGE15">Subscriber's Confirmation </label>
