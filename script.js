@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   // For smooth scrolling
   $('.click-btn').on('click', function(event) {
@@ -15,5 +14,12 @@ $(document).ready(function() {
       );
     }
   });
+
+  // Fixing scrolling behavior in mobile
+  if (window.innerWidth <= 767) {
+    window.addEventListener("hashchange", function() {
+      scrollBy(0, -30);
+    });
+  }
 
 });
