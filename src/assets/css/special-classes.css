@@ -414,3 +414,10 @@
   display: inline-block;
   margin: auto;
 }
+
+/* Fontawesome color */
+
+.input-group svg {
+  color: #074cc4;
+  fill: currentColor;
+}

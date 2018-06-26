@@ -4,31 +4,34 @@ import onClickOutside from 'react-onclickoutside';
 import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+
 import logo from "../../assets/images/svg/logo.svg";
 
 // For the language modal
 class DropDownModal extends Component {
   render() {
     var width = window.innerWidth;
+    var id;
+    var en;
 
     if (width <= 767) {
-      return (
-        <div id="myDropdown-mobile" className="dropdown-content show">
-          <button className="en-btn-mobile" onClick={() => this.props.changeLanguage('en')}>EN</button>
-          <button className="cn-btn-mobile" onClick={() => this.props.changeLanguage('cn')}>中文</button>
-          <button className="cn-btn-mobile" onClick={() => this.props.changeLanguage('ja')}>日本語</button>
-        </div>
-      );
+      id = "myDropdown-mobile";
+      en = "EN";
+    } else {
+      id = "myDropdown";
+      en= "English";
     }
-    else {
-      return (
-        <div id="myDropdown" className="dropdown-content show">
-          <button className="en-btn" onClick={() => this.props.changeLanguage('en')}>English</button>
-          <button className="cn-btn" onClick={() => this.props.changeLanguage('cn')}>中文</button>
-          <button className="cn-btn" onClick={() => this.props.changeLanguage('ja')}>日本語</button>
-        </div>
-      );
-    }
+
+    return (
+      <div id={id} className="dropdown-content show">
+        <button className="en-btn" onClick={() => this.props.changeLanguage('en')}>{en}</button>
+        <button className="cn-btn" onClick={() => this.props.changeLanguage('cn')}>中文</button>
+        <button className="cn-btn" onClick={() => this.props.changeLanguage('ja')}>日本語</button>
+      </div>
+    );
   }
 }
 
@@ -123,8 +126,8 @@ class Header extends Component {
               </button>
               <div id="lang-dropdown-mobile">
                 <button onClick={this.toggleLanguageModal} className="dropbtn">
-                  <Language width={this.width} lang={language} /> 
-                  <i className="fa fa-caret-down dropbtn"></i>
+                  <Language width={this.width} lang={language} />
+                  <FontAwesomeIcon icon={faCaretDown} className="dropbtn" /> 
                 </button>
                 {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
               </div>
@@ -147,13 +150,17 @@ class Header extends Component {
                   <div id="lang-dropdown">
                     <button onClick={this.toggleLanguageModal} className="dropbtn">
                       <Language width={this.width} lang={language} /> 
-                      <i className="fa fa-caret-down dropbtn"></i>
+                      <FontAwesomeIcon icon={faCaretDown} className="dropbtn" />
                     </button>
                     {this.state.languageModal && <DropDownModal changeLanguage={this.changeLanguage}/>}
                   </div>
                 </li>
               </ul>
-              <a id="close-nav" className="menuClose"><button onClick={this.toggleMobileNav}><i className="far fa-times-circle"></i></button></a>
+              <a id="close-nav" className="menuClose">
+                <button onClick={this.toggleMobileNav}>
+                  <FontAwesomeIcon icon={faTimesCircle} />
+                </button>
+              </a>
             </div>
 
           </div>

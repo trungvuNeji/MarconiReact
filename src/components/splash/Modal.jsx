@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import ReCAPTCHA from 'react-google-recaptcha';
 import $ from 'jquery';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
+
 import onClickOutside from 'react-onclickoutside';
 import { translate, Trans } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -170,7 +176,8 @@ class Modal extends Component {
                   type="button" 
                   className="close"
                   data-dismiss="modal"
-                  onClick={this.toggleJoinModal}><i className="far fa-times-circle"></i>
+                  onClick={this.toggleJoinModal}>
+                  <FontAwesomeIcon icon={faTimesCircle} />
                 </button>
                 <h4 className="modal-title"><Trans>Join Modal Title</Trans></h4>
                 <div className="separator">
@@ -183,7 +190,7 @@ class Modal extends Component {
                   <div className="error-message">{this.state.error}</div>
                   <div className="input-group">
                     <div className="input-group-addon">
-                      <i className="fa fa-envelope"></i>
+                      <FontAwesomeIcon icon={faEnvelope} />
                     </div>
                     <input 
                       type="email" 
@@ -200,6 +207,7 @@ class Modal extends Component {
 
                   <div className="input-group">
                     <div className="input-group-addon">
+                      <FontAwesomeIcon icon={faUser} />
                       <i className="fa fa-user"></i>
                     </div>
                     <input 
@@ -215,6 +223,7 @@ class Modal extends Component {
 
                   <div className="input-group">
                     <div className="input-group-addon">
+                      <FontAwesomeIcon icon={faGlobe} />
                       <i className="fa fa-globe"></i>
                     </div>
                     <input 
@@ -271,7 +280,8 @@ class Modal extends Component {
                   <ReCAPTCHA
                     ref="recaptcha"
                     className="g-recaptcha"
-                    sitekey="6LdnUmAUAAAAAKcRAmv5Joo_ND55Yl8WT­-xUKXVb"
+                    // sitekey="6LdnUmAUAAAAAKcRAmv5Joo_ND55Yl8WT­-xUKXVb"
+                    sitekey="6LdnT2AUAAAAAOhcHhkzES7ciITeDB82gK3tCQBo"
                     onChange={this.checkInput}
                   />
 
@@ -324,7 +334,8 @@ class Modal extends Component {
                 <button 
                   type="button" 
                   className="close" 
-                  data-dismiss="modal"><i className="fa fa-times-circle"></i>
+                  data-dismiss="modal">
+                  <FontAwesomeIcon icon={faTimesCircle} />
                 </button>
                 <h2 className="modal-title"><Trans>Thanks Modal title</Trans></h2>
                 <div className="separator">
