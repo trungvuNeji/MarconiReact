@@ -10,8 +10,11 @@
   border-radius: 32px;
   -webkit-box-shadow: 0 0 0 2px #2a4d8c inset;
   box-shadow: 0 0 0 2px #2a4d8c inset;
-  -webkit-transition: all ease-in-out 0.9s;
-  transition: all ease-in-out 0.9s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .transparent-btn a:hover {
@@ -19,6 +22,11 @@
   color: #fff;
   text-decoration: none;
   outline: none;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .blue-btn a {
@@ -31,8 +39,11 @@
   background: #074cc4;
   color: #fff;
   min-width: 236px;
-  -webkit-transition: all ease-in-out 0.9s;
-  transition: all ease-in-out 0.9s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .blue-btn a:hover {
@@ -41,11 +52,19 @@
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .btn-default {
-  -webkit-transition: all ease-in-out 0.9s;
-  transition: all ease-in-out 0.9s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .btn-default[disabled] {
@@ -62,8 +81,11 @@
 .btn-default:hover {
   color: #fff;
   background-color: #2a4d8c;
-  -webkit-transition: all ease-in-out 0.9s;
-  transition: all ease-in-out 0.9s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -ms-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .small-transparent-btn a {
@@ -77,8 +99,11 @@
   border-radius: 20px;
   -webkit-box-shadow: 0 0 0 1px #074cc4 inset;
   box-shadow: 0 0 0 1px #074cc4 inset;
-  -webkit-transition: all ease-in-out 0.6s;
-  transition: all ease-in-out 0.6s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 .small-transparent-btn a:hover {
@@ -87,5 +112,9 @@
   text-decoration: none;
   outline: none;
   box-shadow: 0 0 0 1px #222 inset;
-  transition: all ease-in-out 0.6s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
