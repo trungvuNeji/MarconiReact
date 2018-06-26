@@ -23,23 +23,19 @@
   <!-- All below scripts are for older browsers compatibility -->
 
   <!-- Html5Shiv for IE8 compatibility -->
-  <!--[if lt IE 9]>
+  <!--[if lte IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <link href="assets/css/ie8.css" type="text/css" rel="stylesheet">
-    <script src="./assets/js/ie8-script.js"</script>
+    <link href="../src/assets/css/ie8.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="%PUBLIC_URL%/modernizr-custom.js"></script>
+    <script src="%PUBLIC_URL%/respond.min.js"></script>
   <![endif]-->
 
   <!-- Polyfill for backward compatibility -->
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-
   <!-- Modernizr -->
-  <script src="%PUBLIC_URL%/modernizr-custom.js"></script>
-
   <!-- RespondJS -->
-  <script src="%PUBLIC_URL%/respond.min.js"></script>
 
   <!-- JS script -->
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="%PUBLIC_URL%/script.js"></script>
