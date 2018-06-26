@@ -15,7 +15,7 @@ class TeamPage extends Component {
     this.checkLanguage = this.checkLanguage.bind(this);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     document.title = "Marconi - Team";
 
     var language = i18n.language;
@@ -27,6 +27,8 @@ class TeamPage extends Component {
     
     var navBar = document.querySelector('.header-box');
     navBar.classList.add('sticky');
+
+    await this.checkLanguage();
   }
 
   checkLanguage() {

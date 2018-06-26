@@ -7,6 +7,8 @@ import CoreTech from './CoreTech';
 import UseCases from './UseCases';
 import Developers from '../developers/Developers';
 
+var COUNT = 0;
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class HomePage extends Component {
     this.toggleBackDrop = this.toggleBackDrop.bind(this);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     document.title = "Marconi - Smart Ethernet Protocol";
     this.updateTitleContent();
 
@@ -37,8 +39,32 @@ class HomePage extends Component {
       }, 0);
     }
 
+    // Changing language based on user's preference
+    if (COUNT === 0) {
+      await this.redirect();
+    }
+    await this.checkLanguage();
     // Scroll to top
     window.scrollTo(0,0);
+  }
+
+  redirect() {
+    // Grab user's language preference
+    var language = navigator.language || navigator.browserLanguage;
+    // Need to do this because sometimes user has en-US as default language
+    language = language.split('-')[0];
+
+    if (language === 'zh') { // Chinese
+      this.toggleLanguage('cn');
+      COUNT++;
+    } else if (language === 'ja') { // Japanese
+      this.toggleLanguage('ja');
+      COUNT++;
+    }
+  }
+
+  toggleLanguage(lang) {
+    i18n.changeLanguage(lang);
   }
 
   updateTitleContent() {
@@ -54,35 +80,6 @@ class HomePage extends Component {
     }
   }
 
-  // showThanksModal() {
-  //   // For the thank you modal
-  //   var subscribe = document.querySelector('.subscribe-modal');
-  //   var thanks = document.querySelector('.thanks-modal');
-  //   var close = document.querySelector('.close');
-  //   var backdrop = document.querySelector('.backdrop');
-
-  //   // var join = document.getElementsByClassName('joinBtn')[0];
-  //   // const { hash } = window.location;
-  //   // if (hash === '#/thankyou') {
-  //   window.setTimeout(function() {
-  //     subscribe.classList.add('hide');
-  //     thanks.classList.add('reveal');
-  //     close.click();
-  //     backdrop.classList.add('modal-backdrop', 'fade', 'in');
-
-  //     setTimeout(function() {
-  //       close.click();
-  //       backdrop.classList.remove('modal-backdrop', 'fade', 'in');
-  //     }, 2000);
-
-  //     setTimeout(function() {
-  //       thanks.classList.remove('reveal');
-  //       subscribe.classList.remove('hide');
-  //     }, 3000);
-  //   }, 1000);
-  //   // }
-  // }
-
   toggleJoinModal() {
     var modal = document.querySelector('.modal');
     modal.classList.toggle('in');
@@ -95,7 +92,7 @@ class HomePage extends Component {
   }
 
   checkLanguage() {
-    var lng = i18n.language;
+    var lang = i18n.language;
     // Fixing Chinese margin
     var bannerHeading = document.querySelector('.banner-heading');
     var navbarNav = document.querySelector('.navbar-nav');
@@ -111,7 +108,7 @@ class HomePage extends Component {
     var bottomTextBox = document.querySelector('.bottom-text-box');
     var gdprCN = document.querySelector('.mc-field-group.input-group');
 
-    if (lng === 'cn') {
+    if (lang === 'cn') {
       bannerHeading.classList.add('banner-heading-cn');
       navbarNav.classList.add('navbar-nav-cn');
       bannerText.classList.add('banner-text-cn');
@@ -131,7 +128,7 @@ class HomePage extends Component {
       });
       // blueBtn.classList.add('blue-btn-cn');
     } 
-    else if (lng === 'en' || 'ja') {
+    else if (lang === 'en' || 'ja') {
       bannerHeading.classList.remove('banner-heading-cn');
       navbarNav.classList.remove('navbar-nav-cn');
       bannerText.classList.remove('banner-text-cn');
