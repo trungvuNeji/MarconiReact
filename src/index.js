@@ -7,7 +7,8 @@ import 'es5-shim';
 import 'es6-shim';
 import 'raf/polyfill';
 import 'web-animations-js';
-
+// import 'es3ify';
+// import 'es3ify-loader';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
