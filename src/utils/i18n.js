@@ -19,6 +19,8 @@ i18n.use(LanguageDetector).init({
     ja: ja
   },
   fallbackLng: 'en',
+  // debug can be turned on for console logger output of the current i18n language.
+  // after that, please put it back to FALSE, otherwise it will break in IE9 and below.
   debug: false,
 
   // have a common namespace used around the full app
