@@ -1,6 +1,6 @@
 # Marconi
 
-This was set up using [create-react-app](https://github.com/facebook/create-react-app) for fast set up. All the webpack and liver-reload are already included.
+This was set up using [create-react-app](https://github.com/facebook/create-react-app) for quick set up. All the webpack and live-reload are already included.
 
 Every changes should be made in the `src` folder.
 
